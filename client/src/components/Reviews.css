@@ -1,0 +1,83 @@
+/* ─── Yorumlar · Kat 04 · Sinyal ─── */
+.reviews {
+  background:
+    radial-gradient(50% 60% at 50% 85%, rgba(34, 181, 255, 0.07), transparent 70%);
+}
+.rev-grid {
+  list-style: none;
+  display: grid;
+  gap: var(--s-4);
+  margin-top: var(--s-7);
+}
+.rev-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+}
+.rev-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+.rev-card:hover .rev-img {
+  transform: scale(1.05);
+}
+.rev-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  padding: var(--s-4) var(--s-5) var(--s-5);
+  flex: 1;
+}
+.rev-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-base, 1rem);
+  color: var(--cyan);
+}
+.rev-text {
+  flex: 1;
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  line-height: 1.65;
+}
+
+@media (min-width: 640px) {
+  .rev-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .rev-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--s-5);
+  }
+}
+
+/* ─── Mobil: yorumlar yatay strip ─── */
+@media (max-width: 639px) {
+  .rev-grid {
+    display: flex;
+    gap: var(--s-3);
+    margin-top: var(--s-5);
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding-bottom: var(--s-3);
+    -webkit-overflow-scrolling: touch;
+  }
+  .rev-grid > li {
+    flex: 0 0 min(260px, 80vw);
+    scroll-snap-align: start;
+  }
+  .rev-body {
+    padding: var(--s-3) var(--s-4) var(--s-4);
+  }
+  .rev-text {
+    font-size: var(--fs-xs);
+    line-height: 1.55;
+  }
+}

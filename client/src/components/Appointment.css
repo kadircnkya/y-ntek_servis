@@ -1,0 +1,66 @@
+/* ─── Randevu formu ─── */
+.appt {
+  background: radial-gradient(50% 50% at 50% 0%, rgba(34, 181, 255, 0.08), transparent 70%);
+}
+.appt-form {
+  max-width: 820px;
+  margin: var(--s-7) auto 0;
+  padding: var(--s-6);
+  display: grid;
+  gap: var(--s-4);
+}
+.appt-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.appt-field > span {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-xs);
+  color: var(--cyan);
+  letter-spacing: 0.04em;
+}
+.appt-field input,
+.appt-field select,
+.appt-field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 16px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  outline: none;
+  color-scheme: dark;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.appt-field select option {
+  background: #0b1424;
+  color: #fff;
+}
+.appt-field input:focus,
+.appt-field select:focus,
+.appt-field textarea:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 3px rgba(95, 228, 255, 0.15);
+}
+.appt-field textarea {
+  resize: vertical;
+}
+@media (min-width: 640px) {
+  .appt-form {
+    grid-template-columns: 1fr 1fr;
+  }
+  .appt-wide {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 639px) {
+  .appt-form {
+    padding: var(--s-4);
+    margin-top: var(--s-5);
+    gap: var(--s-3);
+  }
+}

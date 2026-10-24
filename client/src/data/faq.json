@@ -1,0 +1,26 @@
+[
+  {
+    "q": "Montaj ne kadar sürer?",
+    "a": "Tek çanaklı bir kurulum çoğu evde yaklaşık bir saat sürer. Merkezi sistemde süre daire sayısına ve kablo yoluna göre değişir. Keşifte net süreyi söyleriz."
+  },
+  {
+    "q": "Hangi uyduya bakmalıyım?",
+    "a": "İzlemek istediğiniz kanallara bağlı. Yerli kanallar için Türksat 42°D, Avrupa kanalları için Hotbird 13°D ve Astra 19.2°D en yaygın seçimler. Yayındaki kanallar zamanla değişebilir, kurulumda güncel listeyi birlikte kurarız."
+  },
+  {
+    "q": "Kanallar bir anda kayboldu, ne yapmalıyım?",
+    "a": "Önce alıcıyı kapatıp bir dakika sonra açın. Düzelmezse alıcıdan kanal taraması yapın. Yine olmazsa bizi arayın; çanak oynamış, kablo zarar görmüş ya da LNB bozulmuş olabilir."
+  },
+  {
+    "q": "Yağmurda görüntü donuyor, normal mi?",
+    "a": "Çok şiddetli yağışta sinyalin zayıflaması olabilir. Ama hafif yağmurda donuyorsa çanak tam hizalı değildir ya da kablo ve konnektörde sorun vardır. Ölçerle bakıp nedenini buluruz."
+  },
+  {
+    "q": "Apartmanımız için merkezi sistem kurulabilir mi?",
+    "a": "Evet. Daire sayısına ve mevcut kablolara bakıp size bir plan çıkarırız. Yönetim kuruluna sunabileceğimiz yazılı bir teklif de hazırlarız."
+  },
+  {
+    "q": "Fiyatı nasıl öğrenebilirim?",
+    "a": "Fiyat ürüne ve montaj yerine göre değişir. Evinizin ya da çatının bir fotoğrafını WhatsApp'tan gönderin, size net fiyat verelim."
+  }
+]

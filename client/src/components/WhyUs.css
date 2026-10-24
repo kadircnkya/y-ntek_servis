@@ -1,0 +1,80 @@
+/* ─── Neden Biz · Kat 03 · Fark ─── */
+.whyus {
+  background:
+    radial-gradient(45% 55% at 85% 30%, rgba(155, 123, 255, 0.1), transparent 70%);
+}
+
+.reasons {
+  list-style: none;
+  display: grid;
+  gap: var(--s-4);
+  margin-top: var(--s-7);
+  counter-reset: reason;
+}
+.reason {
+  display: flex;
+  gap: var(--s-5);
+  align-items: flex-start;
+  padding: var(--s-5);
+  border-radius: var(--r-card);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+@media (hover: hover) {
+  .reason:hover {
+    border-color: rgba(155, 123, 255, 0.35);
+    background: rgba(155, 123, 255, 0.04);
+  }
+}
+.reason-num {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--cyan), var(--purple));
+  font-family: var(--font-display);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: #fff;
+}
+.reason h3 {
+  font-size: var(--fs-h3);
+}
+.reason p {
+  margin-top: var(--s-1);
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  line-height: 1.65;
+  max-width: 52ch;
+}
+
+@media (min-width: 768px) {
+  .reasons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--s-5);
+  }
+}
+
+/* ─── Mobil: neden biz kartları sıkıştırma ─── */
+@media (max-width: 767px) {
+  .reasons {
+    gap: var(--s-3);
+    margin-top: var(--s-5);
+  }
+  .reason {
+    gap: var(--s-3);
+    padding: var(--s-4);
+  }
+  .reason-num {
+    width: 34px;
+    height: 34px;
+    font-size: var(--fs-xs);
+  }
+  .reason p {
+    font-size: var(--fs-xs);
+    line-height: 1.55;
+  }
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "canak",
+    "name": "Çanak anten",
+    "kind": "dish",
+    "summary": "Sinyali gökten toplayan ayna. Anten ve uydu montajı, bölgenizdeki sinyal gücüne göre doğru çapla yapılır.",
+    "options": ["60 cm", "80 cm", "90 cm", "120 cm"]
+  },
+  {
+    "id": "alici",
+    "name": "Uydu alıcısı",
+    "kind": "receiver",
+    "summary": "Kanal listesi hazır kurulmuş gelir. Televizyonunuza uygun bağlantıyı biz seçeriz.",
+    "options": ["HD", "Full HD", "4K"]
+  },
+  {
+    "id": "plazma",
+    "name": "Plazma TV onarımı",
+    "kind": "tv",
+    "summary": "Plazma televizyonunuzun görüntü, ses ve açılmama sorunlarını yerinde ya da servisimizde onarırız; önce arıza tespiti, sonra net fiyat.",
+    "options": ["Görüntü yok", "Ses sorunu", "Açılmıyor", "Ana kart"]
+  },
+  {
+    "id": "led",
+    "name": "LED değişimi",
+    "kind": "led",
+    "summary": "Arızalı LED televizyon ekranı ve arka aydınlatma değişimi; önce arızayı tespit eder, sonra net fiyat veririz.",
+    "options": ["Ekran", "Arka ışık", "Ana kart", "Güç kartı"]
+  },
+  {
+    "id": "kamera",
+    "name": "Kamera sistemi kurulumu",
+    "kind": "camera",
+    "summary": "Ev, iş yeri ve apartman için güvenlik kamerası kurulumu; telefondan canlı izleme ve kayıt ayarı dahil.",
+    "options": ["2 kamera", "4 kamera", "8 kamera", "Akıllı IP"]
+  },
+  {
+    "id": "duvar",
+    "name": "TV duvar montajı",
+    "kind": "tv",
+    "summary": "Plazma, LED ve akıllı televizyonunuzu duvara sağlam askı aparatıyla monte eder, kabloları düzgünce gizleriz.",
+    "options": ["Sabit askı", "Hareketli askı", "Kablo gizleme", "Kanal ayarı"]
+  }
+]

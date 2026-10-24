@@ -1,0 +1,156 @@
+/* ─── Hizmetler · Kat 02 · Yörünge ─── */
+.services {
+  background:
+    radial-gradient(55% 45% at 10% 85%, rgba(34, 181, 255, 0.1), transparent 70%);
+}
+
+/* Yörünge halkası motifi: büyük ince elipsler + küçük uydu SVG yörüngede döner */
+.orbit-motif {
+  position: absolute;
+  left: clamp(-180px, -12vw, -60px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(240px, 42vw, 600px);
+  aspect-ratio: 1;
+  z-index: -1;
+  opacity: 0.35;
+}
+@media (min-width: 1024px) {
+  .orbit-motif {
+    opacity: 0.55;
+  }
+}
+.orbit-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(95, 228, 255, 0.25);
+}
+.orbit-ring--1 {
+  inset: 10%;
+  border-color: rgba(155, 123, 255, 0.2);
+  animation: orbit-spin 45s linear infinite;
+}
+.orbit-ring--2 {
+  inset: 24%;
+  animation: orbit-spin 60s linear infinite reverse;
+}
+.orbit-sat {
+  position: absolute;
+  width: 14%;
+  top: 4%;
+  left: 50%;
+  animation: orbit-spin 20s linear infinite;
+  transform-origin: 0 calc(50% - 4%);
+}
+.orbit-sat svg {
+  width: 100%;
+  height: auto;
+}
+@keyframes orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hizmet kartları */
+.svc-list {
+  list-style: none;
+  display: grid;
+  gap: var(--s-4);
+  margin-top: var(--s-7);
+}
+.svc-card {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: var(--s-3) var(--s-5);
+  padding: var(--s-5);
+  align-items: start;
+  transition: border-color 0.3s ease;
+}
+@media (hover: hover) {
+  .svc-card:hover {
+    border-color: rgba(95, 228, 255, 0.45);
+  }
+}
+.svc-icon-wrap {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: rgba(95, 228, 255, 0.08);
+  border: 1px solid rgba(95, 228, 255, 0.22);
+  color: var(--cyan);
+}
+.svc-icon-wrap svg {
+  width: 24px;
+  height: 24px;
+}
+.svc-body h3 {
+  font-size: var(--fs-h3);
+}
+.svc-body p {
+  margin-top: var(--s-2);
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  max-width: 50ch;
+}
+.svc-link {
+  grid-column: 2;
+  font-family: var(--font-display);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--cyan);
+  text-decoration: none;
+  min-height: var(--tap);
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+.svc-link:hover {
+  color: var(--text);
+}
+
+@media (min-width: 768px) {
+  .svc-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--s-5);
+  }
+}
+@media (min-width: 1024px) {
+  .svc-card {
+    grid-template-columns: 56px 1fr;
+  }
+}
+
+/* ─── Mobil: hizmet kartları sıkıştırma ─── */
+@media (max-width: 767px) {
+  .svc-list {
+    gap: var(--s-3);
+    margin-top: var(--s-5);
+  }
+  .svc-card {
+    grid-template-columns: 40px 1fr;
+    gap: var(--s-2) var(--s-3);
+    padding: var(--s-4);
+  }
+  .svc-icon-wrap {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .svc-icon-wrap svg {
+    width: 20px;
+    height: 20px;
+  }
+  .svc-body p {
+    font-size: var(--fs-xs);
+    line-height: 1.55;
+  }
+  .svc-link {
+    min-height: 36px;
+    font-size: var(--fs-xs);
+  }
+}

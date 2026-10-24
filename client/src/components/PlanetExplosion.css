@@ -1,0 +1,138 @@
+.planet-explosion-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cosmic-blast {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  contain: layout style paint;
+}
+
+/* ─── Parlayan Çekirdek (Core Bloom) ─── */
+.blast-core {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  margin: -70px 0 0 -70px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 0%, rgba(95, 228, 255, 0.85) 35%, rgba(255, 162, 76, 0.35) 60%, transparent 75%);
+  animation: blast-core-anim 0.45s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes blast-core-anim {
+  0% {
+    transform: scale3d(0.15, 0.15, 1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale3d(1.6, 1.6, 1);
+    opacity: 0;
+  }
+}
+
+/* ─── 1. Plazma Şok Dalga Halkası ─── */
+.blast-ring {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform, opacity;
+}
+
+.blast-ring.ring-1 {
+  width: 220px;
+  height: 220px;
+  margin: -110px 0 0 -110px;
+  border: 2px solid #5fe4ff;
+  box-shadow: 0 0 14px #22b5ff;
+  animation: blast-ring-1 0.85s cubic-bezier(0.1, 0.8, 0.25, 1) forwards;
+}
+
+@keyframes blast-ring-1 {
+  0% {
+    transform: scale3d(0.05, 0.05, 1);
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale3d(2.4, 2.4, 1);
+    opacity: 0;
+  }
+}
+
+/* ─── 2. Sıcak Termal Şok Dalga Halkası ─── */
+.blast-ring.ring-2 {
+  width: 180px;
+  height: 180px;
+  margin: -90px 0 0 -90px;
+  border: 1.5px solid #ffa24c;
+  box-shadow: 0 0 12px #ff7b25;
+  animation: blast-ring-2 1s cubic-bezier(0.15, 0.8, 0.35, 1) 0.06s forwards;
+}
+
+@keyframes blast-ring-2 {
+  0% {
+    transform: scale3d(0.05, 0.05, 1);
+    opacity: 0.9;
+  }
+  65% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale3d(2, 2, 1);
+    opacity: 0;
+  }
+}
+
+/* ─── Yatay Işık Çizgisi (Anamorphic Flare) ─── */
+.blast-flare {
+  position: absolute;
+  width: 300px;
+  height: 2px;
+  margin: -1px 0 0 -150px;
+  background: linear-gradient(90deg, transparent 0%, #ffffff 50%, #5fe4ff 75%, transparent 100%);
+  animation: blast-flare-anim 0.35s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes blast-flare-anim {
+  0% {
+    transform: scaleX(0.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1.8);
+    opacity: 0;
+  }
+}
+
+/* ─── Ultra Hafif Kıvılcımlar (Pure CSS Sparks) ─── */
+.blast-spark {
+  position: absolute;
+  width: var(--s);
+  height: var(--s);
+  margin: calc(var(--s) / -2) 0 0 calc(var(--s) / -2);
+  border-radius: 50%;
+  background: var(--c);
+  box-shadow: 0 0 6px var(--c);
+  animation: blast-spark-anim 0.75s cubic-bezier(0.2, 0.75, 0.35, 1) forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes blast-spark-anim {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(var(--dx), var(--dy), 0) scale(0);
+    opacity: 0;
+  }
+}

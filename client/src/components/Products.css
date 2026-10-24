@@ -1,0 +1,209 @@
+/* ─── Ürünler · Kat 01 · Derin uzay ─── */
+.products {
+  background: radial-gradient(70% 50% at 100% 0%, rgba(155, 123, 255, 0.12), transparent 70%);
+}
+
+/* Halkalı gezegen: tamamen CSS gradient. Tek hareket: yavaş süzülme (transform). */
+.planet-motif {
+  position: absolute;
+  top: clamp(40px, 8vw, 90px);
+  right: clamp(-120px, -6vw, -40px);
+  width: clamp(200px, 34vw, 440px);
+  aspect-ratio: 1;
+  z-index: -1;
+  opacity: 0.45; /* mobilde başlığın arkasında: kontrast için soluk */
+}
+@media (min-width: 1024px) {
+  .planet-motif {
+    opacity: 0.9;
+  }
+}
+.planet-float {
+  position: absolute;
+  inset: 0;
+  animation: planet-float 14s var(--ease-sine) infinite alternate;
+}
+.planet-body {
+  position: absolute;
+  inset: 22%;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.55), transparent 22%),
+    repeating-linear-gradient(-18deg, rgba(255, 255, 255, 0.05) 0 6px, transparent 6px 16px),
+    radial-gradient(circle at 35% 30%, #c6a7ff 0%, #7a5cf0 35%, #2b1d6e 70%, #0d0a2a 100%);
+  box-shadow: inset -18px -24px 40px rgba(3, 5, 12, 0.85), 0 0 80px -10px rgba(155, 123, 255, 0.45);
+}
+.planet-ring {
+  position: absolute;
+  inset: 40% 2%;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 196, 140, 0.55);
+  box-shadow: 0 0 0 6px rgba(255, 162, 76, 0.1), 0 0 0 14px rgba(255, 162, 76, 0.05);
+  transform: rotate(-16deg);
+}
+/* Halkanın ön yarısı gezegenin önünde: arka yarı clip ile gizlenir */
+.planet-ring--back {
+  clip-path: inset(0 0 50% 0);
+}
+.planet-ring--front {
+  clip-path: inset(50% 0 0 0);
+}
+.planet-moon {
+  position: absolute;
+  width: 11%;
+  aspect-ratio: 1;
+  left: 2%;
+  bottom: 8%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #e8f4ff, #7f93b8 55%, #1d2742);
+  box-shadow: inset -4px -5px 8px rgba(3, 5, 12, 0.8);
+  animation: planet-float 9s var(--ease-sine) infinite alternate-reverse;
+}
+@keyframes planet-float {
+  from {
+    transform: translate3d(0, -10px, 0) rotate(-2deg);
+  }
+  to {
+    transform: translate3d(0, 12px, 0) rotate(2deg);
+  }
+}
+
+/* Kart ızgarası: mobile-first tek sütun */
+.p-grid {
+  list-style: none;
+  display: grid;
+  gap: var(--s-4);
+  margin-top: var(--s-7);
+}
+.p-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 0.6s var(--ease-out);
+}
+.p-card.is-tilting {
+  transition: transform 0.12s linear;
+  will-change: transform; /* yalnızca fare üzerindeyken */
+}
+/* Parlama: büyük radyal leke, transform ile fareyi izler (repaint yok) */
+.p-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(140, 230, 255, 0.16), transparent 62%);
+  transform: translate3d(calc(var(--mx, 0px) - 160px), calc(var(--my, 0px) - 160px), 0);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.p-card.is-tilting::after {
+  opacity: 1;
+}
+
+.p-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  color: var(--cyan);
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(60% 70% at 50% 60%, rgba(34, 181, 255, 0.16), transparent 70%),
+    linear-gradient(rgba(95, 228, 255, 0.06) 1px, transparent 1px) 0 0 / 22px 22px,
+    linear-gradient(90deg, rgba(95, 228, 255, 0.06) 1px, transparent 1px) 0 0 / 22px 22px;
+}
+.holo-svg {
+  width: 46%;
+  max-width: 150px;
+  height: auto;
+  filter: drop-shadow(0 0 6px rgba(95, 228, 255, 0.55)); /* statik, animasyonsuz */
+  transition: transform 0.6s var(--ease-out);
+}
+@media (hover: hover) {
+  .p-card:hover .holo-svg {
+    transform: translate3d(0, -4px, 0) scale(1.04);
+  }
+}
+.p-code {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  font-family: var(--font-display);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  color: var(--dim);
+}
+.p-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  flex: 1;
+  padding: var(--s-5);
+}
+.p-body h3 {
+  font-size: var(--fs-h3);
+}
+.p-body p {
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+}
+.p-ask {
+  margin-top: auto;
+  align-self: flex-start;
+}
+.p-ask svg {
+  color: var(--wa);
+}
+
+@media (min-width: 768px) {
+  .p-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--s-5);
+  }
+}
+@media (min-width: 1024px) {
+  .p-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .planet-motif {
+    right: -40px;
+  }
+}
+
+/* ─── Mobil: ürünler yatay strip ─── */
+@media (max-width: 767px) {
+  .p-grid {
+    display: flex;
+    gap: var(--s-3);
+    margin-top: var(--s-5);
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding-bottom: var(--s-3);
+    -webkit-overflow-scrolling: touch;
+  }
+  .p-grid > li {
+    flex: 0 0 min(280px, 78vw);
+    scroll-snap-align: start;
+  }
+  .p-visual {
+    aspect-ratio: 16 / 8;
+  }
+  .p-body {
+    padding: var(--s-4);
+    gap: var(--s-2);
+  }
+  .p-body h3 {
+    font-size: var(--fs-sm);
+  }
+  .p-body p {
+    font-size: var(--fs-xs);
+    line-height: 1.5;
+  }
+}

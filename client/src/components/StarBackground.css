@@ -1,0 +1,25 @@
+/* Sabit uzay katmanı: nebula statik radial-gradient (sıfır animasyon maliyeti), yıldızlar tek canvas. */
+.space-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: var(--bg-0);
+}
+.space-nebula {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(60% 45% at 85% 12%, rgba(155, 123, 255, 0.16), transparent 70%),
+    radial-gradient(50% 40% at 8% 38%, rgba(34, 181, 255, 0.12), transparent 70%),
+    radial-gradient(40% 35% at 70% 85%, rgba(255, 162, 76, 0.07), transparent 70%),
+    radial-gradient(120% 80% at 50% 0%, var(--bg-1), var(--bg-0) 70%);
+}
+.space-stars {
+  position: absolute;
+  inset: 0 0 auto 0;
+  width: 100%;
+  /* lvh: mobilde adres çubuğu açılıp kapanınca canvas yeniden boyutlanmaz */
+  height: 100vh;
+  height: 100lvh;
+}

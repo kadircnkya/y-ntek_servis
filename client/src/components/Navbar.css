@@ -1,0 +1,216 @@
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 60;
+  height: var(--header-h);
+  padding-top: env(safe-area-inset-top);
+}
+/* Arka plan ayrı katmanda: yalnızca opacity geçişi. Tam genişlik blur kullanılmıyor (mobilde pahalı). */
+.nav::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(4, 7, 18, 0.94), rgba(4, 7, 18, 0.86));
+  border-bottom: 1px solid var(--line);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.nav.is-solid::before {
+  opacity: 1;
+}
+.nav-row {
+  position: relative;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: var(--gutter);
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: var(--tap);
+}
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+}
+.nav-brand-text {
+  display: grid;
+  line-height: 1.1;
+}
+.nav-brand-text strong {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+.nav-brand-text small {
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+.nav-links {
+  display: none;
+}
+.nav-call {
+  display: none;
+}
+
+/* Hamburger: 44x44 dokunma hedefi, çizgiler transform ile X olur */
+.nav-toggle {
+  position: relative;
+  width: var(--tap);
+  height: var(--tap);
+  border-radius: 12px;
+  border: 1px solid var(--line-strong);
+  background: rgba(10, 18, 44, 0.6);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.nav-toggle span {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--text);
+  transition: transform 0.3s var(--ease-out), opacity 0.2s ease;
+}
+.nav-toggle span:nth-child(1) {
+  transform: translateY(-6px);
+}
+.nav-toggle span:nth-child(3) {
+  transform: translateY(6px);
+}
+.nav-toggle.is-open span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.nav-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.is-open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Mobil menü: tam ekran, opak zemin (blur yok), transform + opacity ile açılır */
+.m-menu {
+  position: fixed;
+  inset: calc(var(--header-h) + env(safe-area-inset-top)) 0 0 0;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--s-5) var(--gutter) calc(var(--s-5) + env(safe-area-inset-bottom));
+  background:
+    radial-gradient(80% 50% at 100% 0%, rgba(155, 123, 255, 0.18), transparent 70%),
+    radial-gradient(70% 40% at 0% 100%, rgba(34, 181, 255, 0.14), transparent 70%),
+    #040817;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(0, -12px, 0);
+  transition: opacity 0.3s ease, transform 0.4s var(--ease-out), visibility 0s linear 0.4s;
+}
+.m-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity 0.3s ease, transform 0.4s var(--ease-out), visibility 0s;
+}
+.m-menu-list {
+  list-style: none;
+  display: grid;
+  gap: 2px;
+}
+.m-menu-list a {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  min-height: 56px;
+  padding: 12px 4px;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 6vw, 2rem);
+  font-weight: 600;
+  border-bottom: 1px solid var(--line);
+}
+.m-menu-num {
+  font-size: var(--fs-xs);
+  color: var(--cyan);
+  letter-spacing: 0.1em;
+}
+.m-menu-list li {
+  opacity: 0;
+  transform: translate3d(0, 10px, 0);
+  transition: opacity 0.4s ease, transform 0.5s var(--ease-out);
+}
+.m-menu.is-open .m-menu-list li {
+  opacity: 1;
+  transform: none;
+  transition-delay: calc(60ms + var(--i) * 45ms);
+}
+.m-menu-actions {
+  display: grid;
+  gap: var(--s-3);
+  margin-top: var(--s-6);
+}
+.m-menu-actions .btn {
+  min-height: 52px;
+}
+.m-menu-foot {
+  margin-top: auto;
+  padding-top: var(--s-6);
+  color: var(--dim);
+  font-size: var(--fs-sm);
+}
+
+@media (min-width: 768px) {
+  .nav-call {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --header-h: 76px;
+  }
+  .nav-toggle,
+  .m-menu {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 4px;
+  }
+  .nav-links a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--tap);
+    padding: 0 14px;
+    font-family: var(--font-display);
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    color: var(--muted);
+    transition: color 0.2s ease;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 8px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    transform: scaleX(0);
+    transition: transform 0.3s var(--ease-out);
+  }
+  .nav-links a:hover {
+    color: var(--text);
+  }
+  .nav-links a:hover::after {
+    transform: scaleX(1);
+  }
+}

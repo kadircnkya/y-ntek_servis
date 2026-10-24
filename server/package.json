@@ -1,0 +1,14 @@
+{
+  "name": "uydu-site-server",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "NODE_ENV=production node index.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "mongoose": "^8.8.0"
+  }
+}

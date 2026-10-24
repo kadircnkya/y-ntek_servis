@@ -1,0 +1,26 @@
+[
+  {
+    "id": "montaj",
+    "title": "Çanak anten montajı",
+    "text": "Duvara, çatıya, balkon korkuluğuna ya da bahçedeki direğe — konsolu, kabloyu ve bağlantıları baştan sona biz yaparız.",
+    "icon": "mount"
+  },
+  {
+    "id": "yonlendirme",
+    "title": "Uydu yönlendirme ve ayar",
+    "text": "Sinyal ölçerle uyduyu bulur, kanal listesini kurar, görüntü ve ses gelene kadar başınızdan ayrılmayız.",
+    "icon": "aim"
+  },
+  {
+    "id": "servis",
+    "title": "Arıza ve servis",
+    "text": "Görüntü donuyor, kanallar kayboldu, rüzgârda çanak oynadı? Nedenini bulup yerinde çözeriz.",
+    "icon": "repair"
+  },
+  {
+    "id": "merkezi",
+    "title": "Merkezi sistem",
+    "text": "Apartman ve sitelerde tek çanaktan bütün dairelere. Projelendirme, kurulum ve bakım hepsi bir elden.",
+    "icon": "central"
+  }
+]
