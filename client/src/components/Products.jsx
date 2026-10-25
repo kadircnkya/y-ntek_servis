@@ -1,3 +1,4 @@
+import { useState, useRef } from 'react'
 import { useSection } from '../hooks/useSection.js'
 import { useTilt } from '../hooks/useTilt.js'
 import { ProductHologram, WhatsAppIcon } from './Icons.jsx'
@@ -39,6 +40,29 @@ function ProductCard({ p, index }) {
 
 export default function Products() {
   const ref = useSection()
+  const gridRef = useRef(null)
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  const handleScroll = () => {
+    const el = gridRef.current
+    if (!el) return
+    const card = el.firstElementChild
+    if (!card) return
+    const itemWidth = card.getBoundingClientRect().width + 12
+    const idx = Math.round(el.scrollLeft / itemWidth)
+    setActiveIndex(Math.max(0, Math.min(products.length - 1, idx)))
+  }
+
+  const scrollToCard = (i) => {
+    const el = gridRef.current
+    if (!el) return
+    const card = el.firstElementChild
+    if (!card) return
+    const itemWidth = card.getBoundingClientRect().width + 12
+    el.scrollTo({ left: i * itemWidth, behavior: 'smooth' })
+    setActiveIndex(i)
+  }
+
   return (
     <section id="urunler" ref={ref} className="section products" data-alt="∞" data-alt-label="Derin uzay" aria-labelledby="products-title">
       {/* Motif: halkalı gezegen + küçük uydu-ay + nebula. Yalnızca bu bölümde. */}
@@ -64,11 +88,23 @@ export default function Products() {
           </p>
         </header>
 
-        <ul className="p-grid">
+        <ul className="p-grid" ref={gridRef} onScroll={handleScroll}>
           {products.map((p, i) => (
             <ProductCard key={p.id} p={p} index={i} />
           ))}
         </ul>
+
+        <div className="p-dots" aria-hidden="true">
+          {products.map((p, i) => (
+            <button
+              key={p.id}
+              type="button"
+              className={`p-dot ${i === activeIndex ? 'active' : ''}`}
+              aria-label={`Ürün ${i + 1}`}
+              onClick={() => scrollToCard(i)}
+            />
+          ))}
+        </div>
       </div>
     </section>
   )

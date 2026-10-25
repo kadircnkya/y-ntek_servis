@@ -3,42 +3,72 @@
     "id": "canak",
     "name": "Çanak Anten Montajı",
     "kind": "dish",
-    "summary": "Balkon, çatı veya duvara sağlam konsol montajı. Bölgenizdeki sinyal gücüne uygun çanak çapı ve sinyal ölçerle hassas ayar.",
-    "options": ["60 cm", "80 cm", "90 cm", "120 cm"]
+    "summary": "Balkon, çatı veya duvara sağlam konsol montajı. Sinyal ölçer cihazıyla hassas yönlendirme ve kesintisiz yayın.",
+    "options": [
+      "Balkon Montajı",
+      "Çatı Montajı",
+      "Hassas Sinyal Ayarı",
+      "Kablo Çekimi"
+    ]
   },
   {
-    "id": "alici",
-    "name": "Uydu Alıcısı Kurulumu",
-    "kind": "receiver",
-    "summary": "Türksat ve yabancı uydular için güncel frekans ve kanal listesi hazır kurulum. Televizyonunuza en uygun bağlantı seçimi.",
-    "options": ["HD", "Full HD", "4K", "Kanal Güncelleme"]
+    "id": "merkezi",
+    "name": "Merkezi Sistem Uydu",
+    "kind": "multiswitch",
+    "summary": "Apartman ve siteler için Multiswitch merkezi uydu santrali kurulumu, daire hat kontrolü ve sinyal dağıtımı.",
+    "options": [
+      "Multiswitch Santral",
+      "Bina Hat Yenileme",
+      "Daire Sinyal Bölme",
+      "Toplu Çözüm"
+    ]
   },
   {
-    "id": "plazma",
-    "name": "Plazma TV Onarımı",
+    "id": "tv-onarım",
+    "name": "TV Kurulum ve Onarım",
     "kind": "tv",
-    "summary": "Plazma televizyonunuzun görüntü gelmeme, ses var görüntü yok ve açılmama arızalarını yerinde veya servisimizde onarırız.",
-    "options": ["Görüntü Yok", "Ses Sorunu", "Açılmıyor", "Kart Onarımı"]
+    "summary": "Her marka televizyon için sağlam askı aparatı ile duvar montajı, panel arıza tespiti ve garantili LED değişimi.",
+    "options": [
+      "Duvar Askı Montajı",
+      "LED Bar Değişimi",
+      "Görüntü Arızası",
+      "Ses Var Görüntü Yok"
+    ]
   },
   {
-    "id": "led",
-    "name": "LED Değişimi",
-    "kind": "led",
-    "summary": "Arızalı LED TV ekran kararması ve arka aydınlatma (backlight) LED bar değişimi; önce arıza tespiti, sonra garantili onarım.",
-    "options": ["LED Bar Değişimi", "Ekran Kararması", "Ses Var Görüntü Yok", "Garantili Parça"]
+    "id": "frekans",
+    "name": "TV Frekans Güncelleme",
+    "kind": "receiver",
+    "summary": "Türksat 4A ve yabancı uydular için güncel frekans taraması, TKGS otomatik kanal dizilimi ve favori listesi kurulumu.",
+    "options": [
+      "TKGS Kanal Sıralama",
+      "Türksat 4A Güncelleme",
+      "Yabancı Uydu Ayarı",
+      "Kayıp Kanal Bulma"
+    ]
   },
   {
     "id": "kamera",
-    "name": "Kamera Sistemi Kurulumu",
+    "name": "Kamera Sistemleri Kurulumu",
     "kind": "camera",
-    "summary": "Ev, iş yeri, apartman ve bina için yüksek çözünürlüklü güvenlik kamerası montajı; cep telefonundan 7/24 canlı izleme desteği.",
-    "options": ["2 Kameralı", "4 Kameralı", "8 Kameralı", "IP / Gece Görüş"]
+    "summary": "Ev, iş yeri ve apartmanlar için yüksek çözünürlüklü güvenlik kameraları montajı, kayıt cihazı ve telefondan canlı izleme.",
+    "options": [
+      "IP / Gece Görüşlü",
+      "Apartman & Bina",
+      "Telefondan Canlı İzleme",
+      "7/24 Kayıt Cihazı"
+    ]
   },
   {
-    "id": "duvar",
-    "name": "TV Duvar Montajı",
+    "id": "diger",
+    "name": "Diğer",
     "kind": "bracket",
-    "summary": "Tüm marka ve ebat televizyonlar için sağlam askı aparatı montajı, su terazisiyle hassas hizalama ve kablo gizleme.",
-    "options": ["Sabit Askı", "Hareketli Askı", "Kablo Gizleme", "Terazi Ayarı"]
+    "summary": "Listede yer almayan tüm uydu, televizyon, ses-görüntü sistemleri ve kablolama ihtiyaçlarınıza çözüm buluyoruz.",
+    "options": [
+      "Özel Teknik Talep",
+      "Kablo & Hat Yenileme",
+      "Sinyal Güçlendirme",
+      "Yerinde Keşif"
+    ]
   }
 ]

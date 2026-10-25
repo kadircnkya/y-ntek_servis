@@ -476,6 +476,18 @@ ol {
   .eyebrow {
     margin-bottom: var(--s-2);
   }
+  .section {
+    padding-block: clamp(38px, 7vw, 50px);
+  }
+  .h2 {
+    font-size: clamp(1.6rem, 5.5vw, 2.1rem);
+  }
+  /* Mobilde kartların ve elemanların kaydırırken oynamasını / zıplamasını engelle */
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
 
 /* Lazy bölümler yüklenirken yer tutucu (alt bölümler, CLS'yi görünür alanda etkilemez) */

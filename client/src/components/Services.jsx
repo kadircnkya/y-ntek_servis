@@ -6,11 +6,11 @@ import './Appointment.css'
 
 const serviceOptions = [
   'Çanak anten montajı',
-  'Uydu alıcısı kurulumu',
-  'Plazma TV onarımı',
-  'LED değişimi',
-  'Kamera sistemi kurulumu',
-  'TV duvar montajı',
+  'Merkezi sistem uydu',
+  'TV kurulum ve onarım',
+  'TV frekans güncelleme',
+  'Kamera sistemleri kurulumu',
+  'Diğer',
 ]
 
 const districts = [

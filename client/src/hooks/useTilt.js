@@ -12,7 +12,7 @@ export function useTilt(max = 7) {
 
   useEffect(() => {
     const el = ref.current
-    if (!el || prefersReducedMotion()) return
+    if (!el || prefersReducedMotion() || !hasFinePointer() || window.innerWidth < 1024) return
 
     let rect = null
     let raf = 0
