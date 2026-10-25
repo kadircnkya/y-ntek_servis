@@ -130,10 +130,22 @@
     radial-gradient(70% 40% at 0% 100%, rgba(34, 181, 255, 0.14), transparent 70%),
     #040817;
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(95, 228, 255, 0.4) transparent;
   opacity: 0;
   visibility: hidden;
   transform: translate3d(0, -12px, 0);
   transition: opacity 0.3s ease, transform 0.4s var(--ease-out), visibility 0s linear 0.4s;
+}
+.m-menu::-webkit-scrollbar {
+  width: 3px;
+}
+.m-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+.m-menu::-webkit-scrollbar-thumb {
+  background: rgba(95, 228, 255, 0.4);
+  border-radius: 99px;
 }
 .m-menu.is-open {
   opacity: 1;

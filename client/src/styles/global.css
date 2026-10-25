@@ -104,6 +104,38 @@ html {
   max-width: 100%;
   overflow-x: hidden;
   overflow-x: clip;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(95, 228, 255, 0.4) transparent;
+}
+
+/* ─── Minimal Scrollbar (Koyu siyah şeridi kaldırır, sayfa zeminine dikişsiz tam oturtur) ─── */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(95, 228, 255, 0.35);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(95, 228, 255, 0.7);
+}
+
+@media (max-width: 767px) {
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(95, 228, 255, 0.45);
+    border-radius: 99px;
+  }
 }
 body {
   margin: 0;
