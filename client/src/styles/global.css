@@ -100,9 +100,15 @@ html {
   scroll-padding-top: calc(var(--header-h) + 8px);
   background: var(--bg-0);
   color-scheme: dark;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 body {
   margin: 0;
+  width: 100%;
+  max-width: 100%;
   min-height: 100vh;
   background: transparent; /* html zemini boyar; body boyarsa z-index:-1 yıldız katmanını örter */
   color: var(--text);
@@ -113,6 +119,13 @@ body {
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
   overflow-x: clip; /* yatay taşmayı kes, position:sticky'yi bozmadan */
+  position: relative;
+}
+#root,
+main {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 html.menu-open,
 html.menu-open body {
@@ -207,6 +220,8 @@ ol {
 }
 .section {
   position: relative;
+  width: 100%;
+  max-width: 100%;
   padding-block: var(--section-y);
   isolation: isolate;
   overflow: hidden;

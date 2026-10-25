@@ -130,6 +130,8 @@
     left: -10px;
     width: min(240px, 60vw);
     pointer-events: none;
+    overflow: hidden;
+    contain: paint;
   }
 }
 

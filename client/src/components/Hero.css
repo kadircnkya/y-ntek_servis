@@ -1,10 +1,14 @@
 /* ─── Hero: gösterinin toplandığı yer ─── */
 .hero {
   position: relative;
+  width: 100%;
+  max-width: 100%;
   min-height: 85vh;
   min-height: 85svh;
   display: flex;
   overflow: hidden;
+  overflow: clip;
+  contain: paint;
   isolation: isolate;
   background: var(--bg-0);
 }

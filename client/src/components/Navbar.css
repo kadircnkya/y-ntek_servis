@@ -1,6 +1,9 @@
 .nav {
   position: fixed;
   inset: 0 0 auto 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
   z-index: 60;
   height: var(--header-h);
   padding-top: env(safe-area-inset-top);
