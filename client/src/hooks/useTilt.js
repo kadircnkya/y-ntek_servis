@@ -12,7 +12,8 @@ export function useTilt(max = 7) {
 
   useEffect(() => {
     const el = ref.current
-    if (!el || !hasFinePointer() || prefersReducedMotion()) return
+    if (!el || prefersReducedMotion()) return
+
     let rect = null
     let raf = 0
     let rx = 0
@@ -30,11 +31,15 @@ export function useTilt(max = 7) {
     const queue = () => {
       if (!raf) raf = requestAnimationFrame(apply)
     }
-    const enter = () => {
+    const enter = (e) => {
+      // Yalnızca masaüstünde (1024px ve üzeri fare etkileşiminde) çalışır
+      if (e.pointerType === 'touch' || window.innerWidth < 1024) return
       rect = el.getBoundingClientRect()
       el.classList.add('is-tilting')
     }
     const move = (e) => {
+      // Yalnızca masaüstünde (1024px ve üzeri fare etkileşiminde) çalışır
+      if (e.pointerType === 'touch' || window.innerWidth < 1024) return
       if (!rect) rect = el.getBoundingClientRect()
       const px = (e.clientX - rect.left) / rect.width
       const py = (e.clientY - rect.top) / rect.height
@@ -44,7 +49,8 @@ export function useTilt(max = 7) {
       my = py * rect.height
       queue()
     }
-    const leave = () => {
+    const leave = (e) => {
+      if (e && e.pointerType === 'touch') return
       rect = null
       rx = 0
       ry = 0

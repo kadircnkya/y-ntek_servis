@@ -47,7 +47,7 @@ export default function Appointment() {
   }
 
   return (
-    <section id="hizmetler" ref={ref} className="section appt" aria-labelledby="appt-title">
+    <section id="randevu" ref={ref} className="section appt" aria-labelledby="appt-title">
       <div className="container">
         <header className="section-head reveal">
           <p className="eyebrow">Kat 02 <b>· Randevu</b></p>

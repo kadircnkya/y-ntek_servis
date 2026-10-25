@@ -27,7 +27,8 @@ const works = [
 export default function Reviews() {
   const ref = useSection()
   return (
-    <section id="yorumlar" ref={ref} className="section reviews" aria-labelledby="reviews-title">
+    <section id="hizmetler" ref={ref} className="section reviews" aria-labelledby="reviews-title">
+      <span id="yorumlar" aria-hidden="true" style={{ position: 'absolute', top: 0 }} />
       <div className="container">
         <header className="section-head reveal">
           <p className="eyebrow">Kat 04 <b>· Servis</b></p>

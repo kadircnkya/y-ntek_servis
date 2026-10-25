@@ -1,44 +1,44 @@
 [
   {
     "id": "canak",
-    "name": "Çanak anten",
+    "name": "Çanak Anten Montajı",
     "kind": "dish",
-    "summary": "Sinyali gökten toplayan ayna. Anten ve uydu montajı, bölgenizdeki sinyal gücüne göre doğru çapla yapılır.",
+    "summary": "Balkon, çatı veya duvara sağlam konsol montajı. Bölgenizdeki sinyal gücüne uygun çanak çapı ve sinyal ölçerle hassas ayar.",
     "options": ["60 cm", "80 cm", "90 cm", "120 cm"]
   },
   {
     "id": "alici",
-    "name": "Uydu alıcısı",
+    "name": "Uydu Alıcısı Kurulumu",
     "kind": "receiver",
-    "summary": "Kanal listesi hazır kurulmuş gelir. Televizyonunuza uygun bağlantıyı biz seçeriz.",
-    "options": ["HD", "Full HD", "4K"]
+    "summary": "Türksat ve yabancı uydular için güncel frekans ve kanal listesi hazır kurulum. Televizyonunuza en uygun bağlantı seçimi.",
+    "options": ["HD", "Full HD", "4K", "Kanal Güncelleme"]
   },
   {
     "id": "plazma",
-    "name": "Plazma TV onarımı",
+    "name": "Plazma TV Onarımı",
     "kind": "tv",
-    "summary": "Plazma televizyonunuzun görüntü, ses ve açılmama sorunlarını yerinde ya da servisimizde onarırız; önce arıza tespiti, sonra net fiyat.",
-    "options": ["Görüntü yok", "Ses sorunu", "Açılmıyor", "Ana kart"]
+    "summary": "Plazma televizyonunuzun görüntü gelmeme, ses var görüntü yok ve açılmama arızalarını yerinde veya servisimizde onarırız.",
+    "options": ["Görüntü Yok", "Ses Sorunu", "Açılmıyor", "Kart Onarımı"]
   },
   {
     "id": "led",
-    "name": "LED değişimi",
+    "name": "LED Değişimi",
     "kind": "led",
-    "summary": "Arızalı LED televizyon ekranı ve arka aydınlatma değişimi; önce arızayı tespit eder, sonra net fiyat veririz.",
-    "options": ["Ekran", "Arka ışık", "Ana kart", "Güç kartı"]
+    "summary": "Arızalı LED TV ekran kararması ve arka aydınlatma (backlight) LED bar değişimi; önce arıza tespiti, sonra garantili onarım.",
+    "options": ["LED Bar Değişimi", "Ekran Kararması", "Ses Var Görüntü Yok", "Garantili Parça"]
   },
   {
     "id": "kamera",
-    "name": "Kamera sistemi kurulumu",
+    "name": "Kamera Sistemi Kurulumu",
     "kind": "camera",
-    "summary": "Ev, iş yeri ve apartman için güvenlik kamerası kurulumu; telefondan canlı izleme ve kayıt ayarı dahil.",
-    "options": ["2 kamera", "4 kamera", "8 kamera", "Akıllı IP"]
+    "summary": "Ev, iş yeri, apartman ve bina için yüksek çözünürlüklü güvenlik kamerası montajı; cep telefonundan 7/24 canlı izleme desteği.",
+    "options": ["2 Kameralı", "4 Kameralı", "8 Kameralı", "IP / Gece Görüş"]
   },
   {
     "id": "duvar",
-    "name": "TV duvar montajı",
-    "kind": "tv",
-    "summary": "Plazma, LED ve akıllı televizyonunuzu duvara sağlam askı aparatıyla monte eder, kabloları düzgünce gizleriz.",
-    "options": ["Sabit askı", "Hareketli askı", "Kablo gizleme", "Kanal ayarı"]
+    "name": "TV Duvar Montajı",
+    "kind": "bracket",
+    "summary": "Tüm marka ve ebat televizyonlar için sağlam askı aparatı montajı, su terazisiyle hassas hizalama ve kablo gizleme.",
+    "options": ["Sabit Askı", "Hareketli Askı", "Kablo Gizleme", "Terazi Ayarı"]
   }
 ]

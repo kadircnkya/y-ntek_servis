@@ -114,8 +114,16 @@ body {
   overflow-x: hidden;
   overflow-x: clip; /* yatay taşmayı kes, position:sticky'yi bozmadan */
 }
+html.menu-open,
 html.menu-open body {
   overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: none;
+}
+input,
+select,
+textarea {
+  font-size: 16px; /* iOS Safari auto-zoom engelleme */
 }
 img,
 svg,

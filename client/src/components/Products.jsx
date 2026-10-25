@@ -60,8 +60,7 @@ export default function Products() {
             Sinyali yakalayan <em>donanım</em>
           </h2>
           <p className="lede">
-            Çanaktan kabloya, yayının çatınızda kaybolmaması için gereken her parça rafımızda. Fiyat montaj yerine göre
-            değişir; kartlardan tek dokunuşla sorun.
+            Çanak montajından televizyon onarımına, kamera sistemlerinden TV duvar askısına kadar ihtiyacınız olan donanım ve teknik hizmetler. Fiyat ve detay için kartlardan tek dokunuşla ulaşın.
           </p>
         </header>
 

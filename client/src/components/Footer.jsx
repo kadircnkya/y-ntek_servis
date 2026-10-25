@@ -1,4 +1,3 @@
-import { LogoIcon } from './Icons.jsx'
 import { SHOP } from '../config.js'
 import './Footer.css'
 
@@ -7,8 +6,7 @@ const year = new Date().getFullYear()
 const navLinks = [
   { href: '#urunler', label: 'Ürünler' },
   { href: '#hizmetler', label: 'Hizmetler' },
-  { href: '#neden-biz', label: 'Neden biz' },
-  { href: '#yorumlar', label: 'Yorumlar' },
+  { href: '#neden-biz', label: 'Neden Biz' },
   { href: '#iletisim', label: 'İletişim' },
 ]
 
@@ -18,9 +16,18 @@ export default function Footer() {
       <div className="container footer-inner">
         {/* Logo + slogan */}
         <div className="footer-brand">
-          <a href="#" className="footer-logo" aria-label="Anasayfaya dön">
-            <LogoIcon />
-            <span>{SHOP.name}</span>
+          <a href="#top" className="footer-logo" aria-label={`${SHOP.name} anasayfaya dön`}>
+            <img
+              src="/yontek-rozet.svg"
+              alt={`${SHOP.name} Rozet Logo`}
+              className="footer-rozet-logo"
+              width="56"
+              height="56"
+            />
+            <div className="footer-brand-text">
+              <strong>{SHOP.name}</strong>
+              <small>Teknik Servis · Uydu &amp; Çanak</small>
+            </div>
           </a>
           <p className="footer-tagline">Sinyal uzaydan gelir, çatınıza biz ulaştırırız.</p>
         </div>

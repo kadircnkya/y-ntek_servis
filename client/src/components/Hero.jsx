@@ -1,16 +1,15 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { canLoadHeroVideo, prefersReducedMotion } from '../lib/device.js'
 import { site, telLink } from '../config.js'
 import { ArrowIcon, PhoneIcon } from './Icons.jsx'
 import { PlanetExplosion } from './PlanetExplosion.jsx'
 import './Hero.css'
 
-// Videonun zaman çizelgesi (saniye). Videoyu değiştirirseniz sadece burayı güncelleyin.
-const CUES = [0, 4, 8]
-const stageAt = (t) => (t >= CUES[2] ? 2 : t >= CUES[1] ? 1 : 0)
+const CUES = [0, 1, 2]
 
 const POSTER_SIZES = '(orientation: portrait) 178vh, 100vw'
-const LOCATIONS = ['Derin uzay', 'Atmosfere giriş', 'İstanbul Anadolu']
+const LOCATION = 'İstanbul Anadolu'
 
 const ANADOLU_DISTRICTS = [
   'Adalar', 'Ataşehir', 'Beykoz', 'Çekmeköy', 'Kadıköy',
@@ -20,7 +19,7 @@ const ANADOLU_DISTRICTS = [
 
 export default function Hero() {
   const reduced = useRef(prefersReducedMotion()).current
-  const [stage, setStage] = useState(reduced ? 2 : 0)
+  const [stage, setStage] = useState(0)
   const [videoOn, setVideoOn] = useState(false) // <video> DOM'a eklendi mi
   const [videoReady, setVideoReady] = useState(false) // ilk kare oynadı mı
   const [timerOn, setTimerOn] = useState(false) // video yoksa metinleri zamanlayıcı sürer
@@ -39,8 +38,57 @@ export default function Hero() {
     explosionRef.current?.trigger(x, y)
   }
 
-  // Aşama sadece ileri gider (atla butonu / geç gelen timeupdate geri sardırmasın)
-  const advance = useCallback((n) => setStage((s) => (n > s ? n : s)), [])
+  // Modal açıkken arkadaki sayfanın kaymasını engelle
+  useEffect(() => {
+    if (!modalOpen) return
+    const prevOverflow = document.body.style.overflow
+    const prevTouchAction = document.body.style.touchAction
+    document.body.style.overflow = 'hidden'
+    document.body.style.touchAction = 'none'
+    const onKey = (e) => {
+      if (e.key === 'Escape') setModalOpen(false)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => {
+      document.body.style.overflow = prevOverflow
+      document.body.style.touchAction = prevTouchAction
+      window.removeEventListener('keydown', onKey)
+    }
+  }, [modalOpen])
+
+  const [animRun, setAnimRun] = useState(0)
+  const [isTabHidden, setIsTabHidden] = useState(false)
+
+  // Sekme arka plandayken animasyonu durdur / geri gelince devam et
+  useEffect(() => {
+    const onVisChange = () => setIsTabHidden(document.hidden)
+    document.addEventListener('visibilitychange', onVisChange)
+    return () => document.removeEventListener('visibilitychange', onVisChange)
+  }, [])
+
+  // Tek doğruluk kaynağı: Çubuk dolum animasyonu bittiğinde sonraki slayta geç
+  const handleBarAnimationEnd = (index) => {
+    if (index === stage) {
+      setStage((prev) => (prev + 1) % 3)
+      setAnimRun((r) => r + 1)
+    }
+  }
+
+  // Çubuğa tıklanınca doğrudan o slayta geç
+  const handleBarClick = (index) => {
+    setStage(index)
+    setAnimRun((r) => r + 1)
+  }
+
+  // prefers-reduced-motion açıksa CSS animasyonu yerine basit zamanlayıcı
+  useEffect(() => {
+    if (!reduced || isTabHidden) return
+    const timer = setTimeout(() => {
+      setStage((prev) => (prev + 1) % 3)
+      setAnimRun((r) => r + 1)
+    }, 4000)
+    return () => clearTimeout(timer)
+  }, [stage, reduced, isTabHidden])
 
   // 1) Video kararı: poster (LCP) yüklendikten SONRA, tarayıcı boştayken.
   useEffect(() => {
@@ -85,17 +133,6 @@ export default function Hero() {
     return () => clearTimeout(watchdog)
   }, [videoOn])
 
-  // 3) Zamanlayıcı yedeği (Save-Data, yavaş hat, autoplay engeli)
-  useEffect(() => {
-    if (!timerOn) return
-    const a = setTimeout(() => advance(1), CUES[1] * 1000)
-    const b = setTimeout(() => advance(2), CUES[2] * 1000)
-    return () => {
-      clearTimeout(a)
-      clearTimeout(b)
-    }
-  }, [timerOn, advance])
-
   // 4) Sekme gizli veya hero ekranda değilse videoyu durdur (decode maliyeti sıfır)
   useEffect(() => {
     if (!videoOn) return
@@ -105,7 +142,7 @@ export default function Hero() {
     let inView = true
     const sync = () => {
       if (document.hidden || !inView) v.pause()
-      else if (!v.ended) v.play().catch(() => {})
+      else if (!v.ended) v.play().catch(() => { })
     }
     const io = new IntersectionObserver(([e]) => {
       inView = e.isIntersecting
@@ -118,10 +155,6 @@ export default function Hero() {
       document.removeEventListener('visibilitychange', sync)
     }
   }, [videoOn])
-
-  const onTimeUpdate = (e) => advance(stageAt(e.currentTarget.currentTime))
-  const skip = () => advance(2)
-  const isFinal = stage === 2
 
   return (
     <section
@@ -163,8 +196,6 @@ export default function Hero() {
             setBuffering(false)
           }}
           onWaiting={() => setBuffering(true)}
-          onTimeUpdate={onTimeUpdate}
-          onEnded={() => advance(2)} // loop yok: son karede kalır
         >
           {/* Mobil: 720p ayrı kaynak. media desteklemeyen eski tarayıcı ilk kaynağı (hafif olanı) seçer. */}
           <source src="/hero-720.mp4" type="video/mp4" media="(max-width: 767px)" />
@@ -187,64 +218,91 @@ export default function Hero() {
         >
           <span className="hero-hud-dot" />
           <span className="hero-hud-label">Konum:</span>
-          <span className="hero-hud-value" key={stage}>
-            {LOCATIONS[stage]}
+          <span className="hero-hud-value">
+            {LOCATION}
           </span>
           <span className="hero-hud-hint">İlçeler ↗</span>
         </button>
 
-        <div className="hero-slides">
-          <div className={`hero-slide ${stage === 0 ? 'is-active' : 'is-past'}`} aria-hidden="true">
-            <p className="hero-kicker">İletim 01 / 03</p>
-            <p className="hero-title">Uzaydan başlayan sinyal</p>
-            <p className="hero-sub">Her yayın bir yerden gelir.</p>
-          </div>
+        <div className="hero-content">
+          {/* Üstteki mavi yazı: tüm slaytlarda sabit kalır */}
+          <p className="hero-kicker">
+            {site.city} · Çanak anten satış, montaj ve uydu ayarı
+          </p>
 
-          <div className={`hero-slide ${stage === 1 ? 'is-active' : stage > 1 ? 'is-past' : ''}`} aria-hidden="true">
-            <p className="hero-kicker">İletim 02 / 03</p>
-            <p className="hero-title">Dünyaya iniyoruz</p>
-            <p className="hero-sub">Sinyal sizin çatınıza ulaşır.</p>
-          </div>
-
-          {/* Son aşama ekran okuyucuya hep açık: h1 en baştan DOM'da */}
-          <div className={`hero-slide hero-slide--final ${isFinal ? 'is-active' : ''}`}>
-            <p className="hero-kicker">
-              {site.city} · Çanak anten satış, montaj ve uydu ayarı
-            </p>
-            <h1 id="hero-title" className="hero-title hero-title--brand">
-              {site.name}
-            </h1>
-            <p className="hero-sub">
-              Sinyal uzaydan gelir, <span className="hl">çatınıza biz ulaştırırız.</span>
-            </p>
-            <div className="hero-actions">
-              <a id="hero-cta-products" className="btn btn-primary" href="#urunler" tabIndex={isFinal ? 0 : -1}>
-                Ürünleri Gör <ArrowIcon />
-              </a>
-              <a id="hero-cta-call" className="btn btn-ghost" href={telLink} tabIndex={isFinal ? 0 : -1}>
-                <PhoneIcon /> Hemen ara
-              </a>
+          {/* Sadece ortadaki yazılar değişir (CLS 0) */}
+          <div className="hero-slides">
+            {/* Slayt 0: İlk açılışta doğrudan Yöntek Teknik Servis */}
+            <div className={`hero-slide ${stage === 0 ? 'is-active' : 'is-past'}`} aria-hidden={stage !== 0}>
+              <h1 id="hero-title" className="hero-title hero-title--brand">
+                {site.name}
+              </h1>
+              <p className="hero-sub">
+                Sinyal uzaydan gelir, <span className="hl">çatınıza biz ulaştırırız.</span>
+              </p>
             </div>
+
+            {/* Slayt 1: Uzaydan başlayan sinyal */}
+            <div className={`hero-slide ${stage === 1 ? 'is-active' : stage > 1 ? 'is-past' : ''}`} aria-hidden={stage !== 1}>
+              <p className="hero-title">Uzaydan başlayan sinyal</p>
+              <p className="hero-sub">Her yayın bir yerden gelir, en net görüntü ve kesintisiz televizyon yayını.</p>
+            </div>
+
+            {/* Slayt 2: Dünyaya iniyoruz */}
+            <div className={`hero-slide ${stage === 2 ? 'is-active' : ''}`} aria-hidden={stage !== 2}>
+              <p className="hero-title">Dünyaya iniyoruz</p>
+              <p className="hero-sub">Sinyal sizin çatınıza ulaşır, aynı gün montaj ve profesyonel uydu ayarı.</p>
+            </div>
+          </div>
+
+          {/* Butonlar: tüm slaytlarda sabit ve tıklanabilir kalır */}
+          <div className="hero-actions">
+            <a id="hero-cta-products" className="btn btn-primary" href="#hizmetler">
+              Hizmetleri Gör <ArrowIcon />
+            </a>
+            <a id="hero-cta-call" className="btn btn-ghost" href={telLink}>
+              <PhoneIcon /> Hemen ara
+            </a>
           </div>
         </div>
 
-        <div className={`hero-foot ${buffering ? 'is-buffering' : ''}`}>
-          <ol className="hero-progress" aria-hidden="true">
-            {CUES.map((_, i) => (
-              <li key={i} className={i < stage ? 'done' : i === stage ? 'active' : ''}>
-                <i />
-              </li>
-            ))}
-          </ol>
-          {!isFinal && (
-            <button id="hero-skip" type="button" className="hero-skip" onClick={skip}>
-              Girişi geç
-            </button>
-          )}
+        <div className={`hero-foot ${isTabHidden ? 'is-tab-paused' : ''}`}>
+          <div className="hero-progress" role="tablist" aria-label="Slayt göstergeleri">
+            {[0, 1, 2].map((i) => {
+              const isPast = i < stage
+              const isActive = i === stage
+              return (
+                <button
+                  key={i}
+                  type="button"
+                  role="tab"
+                  className={`hero-bar-btn ${isPast ? 'is-done' : ''} ${isActive ? 'is-active' : ''}`}
+                  aria-label={`Slayt ${i + 1} / 3`}
+                  aria-current={isActive ? 'true' : undefined}
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    handleBarClick(i)
+                  }}
+                >
+                  <span className="hero-bar-track">
+                    {isActive ? (
+                      <span
+                        key={`${i}-${stage}-${animRun}`}
+                        className="hero-bar-fill"
+                        onAnimationEnd={() => handleBarAnimationEnd(i)}
+                      />
+                    ) : isPast ? (
+                      <span className="hero-bar-fill is-filled" />
+                    ) : null}
+                  </span>
+                </button>
+              )
+            })}
+          </div>
         </div>
       </div>
 
-      {modalOpen && (
+      {modalOpen && typeof document !== 'undefined' && createPortal(
         <div
           className="districts-modal-backdrop"
           onClick={(e) => {
@@ -279,14 +337,15 @@ export default function Hero() {
               ))}
             </ul>
             <a
-              href="#hizmetler"
+              href="#randevu"
               className="btn btn-wa btn-block"
               onClick={() => setModalOpen(false)}
             >
               Randevu Al
             </a>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </section>
   )

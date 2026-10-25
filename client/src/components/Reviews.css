@@ -65,9 +65,16 @@
     gap: var(--s-3);
     margin-top: var(--s-5);
     overflow-x: auto;
-    scroll-snap-type: x proximity;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x pan-y;
+    scroll-snap-type: x mandatory;
     padding-bottom: var(--s-3);
+    padding-inline: 2px;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .rev-grid::-webkit-scrollbar {
+    display: none;
   }
   .rev-grid > li {
     flex: 0 0 min(260px, 80vw);

@@ -1,0 +1,1634 @@
+{
+  "360x640": {
+    "clientWidth": 360,
+    "initialScrollWidth": 360,
+    "hasInitialOverflow": false,
+    "overflowCount": 126,
+    "overflowingElements": [
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-motif",
+        "section": "urunler",
+        "rect": {
+          "left": 200,
+          "right": 400,
+          "width": 200,
+          "overflowAmount": 40
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-float",
+        "section": "urunler",
+        "rect": {
+          "left": 197,
+          "right": 403,
+          "width": 207,
+          "overflowAmount": 43
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-ring planet-ring--back",
+        "section": "urunler",
+        "rect": {
+          "left": 203,
+          "right": 397,
+          "width": 195,
+          "overflowAmount": 37
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-ring planet-ring--front",
+        "section": "urunler",
+        "rect": {
+          "left": 203,
+          "right": 397,
+          "width": 195,
+          "overflowAmount": 37
+        }
+      },
+      {
+        "tag": "article",
+        "id": "",
+        "className": "p-card glass",
+        "section": "urunler",
+        "rect": {
+          "left": 308,
+          "right": 588,
+          "width": 280,
+          "overflowAmount": 228
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "p-visual",
+        "section": "urunler",
+        "rect": {
+          "left": 309,
+          "right": 587,
+          "width": 278,
+          "overflowAmount": 227
+        }
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 384,
+          "right": 512,
+          "width": 128,
+          "overflowAmount": 152
+        }
+      },
+      {
+        "tag": "g",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 399,
+          "right": 497,
+          "width": 98,
+          "overflowAmount": 137
+        }
+      },
+      {
+        "tag": "rect",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 399,
+          "right": 497,
+          "width": 98,
+          "overflowAmount": 137
+        }
+      },
+      {
+        "tag": "path",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 399,
+          "right": 497,
+          "width": 98,
+          "overflowAmount": 137
+        }
+      },
+      {
+        "tag": "rect",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 408,
+          "right": 435,
+          "width": 28,
+          "overflowAmount": 75
+        }
+      },
+      {
+        "tag": "text",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 411,
+          "right": 422,
+          "width": 11,
+          "overflowAmount": 62
+        }
+      },
+      {
+        "tag": "circle",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 475,
+          "right": 486,
+          "width": 11,
+          "overflowAmount": 126
+        }
+      },
+      {
+        "tag": "circle",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 461,
+          "right": 465,
+          "width": 4,
+          "overflowAmount": 105
+        }
+      },
+      {
+        "tag": "path",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 410,
+          "right": 487,
+          "width": 77,
+          "overflowAmount": 127
+        }
+      },
+      {
+        "tag": "path",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 435,
+          "right": 461,
+          "width": 26,
+          "overflowAmount": 101
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "p-body",
+        "section": "urunler",
+        "rect": {
+          "left": 309,
+          "right": 587,
+          "width": 278,
+          "overflowAmount": 227
+        }
+      },
+      {
+        "tag": "h3",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 325,
+          "right": 571,
+          "width": 246,
+          "overflowAmount": 211
+        }
+      },
+      {
+        "tag": "p",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 325,
+          "right": 571,
+          "width": 246,
+          "overflowAmount": 211
+        }
+      },
+      {
+        "tag": "ul",
+        "id": "",
+        "className": "chips",
+        "section": "urunler",
+        "rect": {
+          "left": 325,
+          "right": 571,
+          "width": 246,
+          "overflowAmount": 211
+        }
+      }
+    ],
+    "smallTouchTargetsCount": 8,
+    "smallTouchTargets": [
+      {
+        "tag": "button",
+        "id": "",
+        "text": "KONUM:\nDerin uzay\nİlçeler ↗",
+        "className": "hero-hud hero-hud-btn",
+        "size": "232x33"
+      },
+      {
+        "tag": "a",
+        "id": "hero-cta-products",
+        "text": "Ürünleri Gör",
+        "className": "btn btn-primary",
+        "size": "138x42"
+      },
+      {
+        "tag": "a",
+        "id": "hero-cta-call",
+        "text": "Hemen ara",
+        "className": "btn btn-ghost",
+        "size": "130x42"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Ürünler",
+        "className": "",
+        "size": "49x17"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Hizmetler",
+        "className": "",
+        "size": "64x17"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Neden biz",
+        "className": "",
+        "size": "68x17"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Yorumlar",
+        "className": "",
+        "size": "59x17"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "İletişim",
+        "className": "",
+        "size": "46x17"
+      }
+    ]
+  },
+  "375x667": {
+    "clientWidth": 375,
+    "initialScrollWidth": 375,
+    "hasInitialOverflow": false,
+    "overflowCount": 124,
+    "overflowingElements": [
+      {
+        "tag": "div",
+        "id": "",
+        "className": "blast-ring ring-2",
+        "section": "top",
+        "rect": {
+          "left": 75,
+          "right": 435,
+          "width": 359,
+          "overflowAmount": 60
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-motif",
+        "section": "urunler",
+        "rect": {
+          "left": 215,
+          "right": 415,
+          "width": 200,
+          "overflowAmount": 40
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-float",
+        "section": "urunler",
+        "rect": {
+          "left": 212,
+          "right": 418,
+          "width": 206,
+          "overflowAmount": 43
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-ring planet-ring--back",
+        "section": "urunler",
+        "rect": {
+          "left": 217,
+          "right": 413,
+          "width": 195,
+          "overflowAmount": 38
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-ring planet-ring--front",
+        "section": "urunler",
+        "rect": {
+          "left": 217,
+          "right": 413,
+          "width": 195,
+          "overflowAmount": 38
+        }
+      },
+      {
+        "tag": "article",
+        "id": "",
+        "className": "p-card glass",
+        "section": "urunler",
+        "rect": {
+          "left": 309,
+          "right": 589,
+          "width": 280,
+          "overflowAmount": 214
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "p-visual",
+        "section": "urunler",
+        "rect": {
+          "left": 310,
+          "right": 588,
+          "width": 278,
+          "overflowAmount": 213
+        }
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 385,
+          "right": 513,
+          "width": 128,
+          "overflowAmount": 138
+        }
+      },
+      {
+        "tag": "g",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 400,
+          "right": 498,
+          "width": 98,
+          "overflowAmount": 123
+        }
+      },
+      {
+        "tag": "rect",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 400,
+          "right": 498,
+          "width": 98,
+          "overflowAmount": 123
+        }
+      },
+      {
+        "tag": "path",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 400,
+          "right": 498,
+          "width": 98,
+          "overflowAmount": 123
+        }
+      },
+      {
+        "tag": "rect",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 408,
+          "right": 436,
+          "width": 28,
+          "overflowAmount": 61
+        }
+      },
+      {
+        "tag": "text",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 412,
+          "right": 422,
+          "width": 11,
+          "overflowAmount": 47
+        }
+      },
+      {
+        "tag": "circle",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 476,
+          "right": 486,
+          "width": 11,
+          "overflowAmount": 111
+        }
+      },
+      {
+        "tag": "circle",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 462,
+          "right": 466,
+          "width": 4,
+          "overflowAmount": 91
+        }
+      },
+      {
+        "tag": "path",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 411,
+          "right": 487,
+          "width": 77,
+          "overflowAmount": 112
+        }
+      },
+      {
+        "tag": "path",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 436,
+          "right": 462,
+          "width": 26,
+          "overflowAmount": 87
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "p-body",
+        "section": "urunler",
+        "rect": {
+          "left": 310,
+          "right": 588,
+          "width": 278,
+          "overflowAmount": 213
+        }
+      },
+      {
+        "tag": "h3",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 326,
+          "right": 572,
+          "width": 246,
+          "overflowAmount": 197
+        }
+      },
+      {
+        "tag": "p",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 326,
+          "right": 572,
+          "width": 246,
+          "overflowAmount": 197
+        }
+      }
+    ],
+    "smallTouchTargetsCount": 8,
+    "smallTouchTargets": [
+      {
+        "tag": "button",
+        "id": "",
+        "text": "KONUM:\nDerin uzay\nİlçeler ↗",
+        "className": "hero-hud hero-hud-btn",
+        "size": "232x33"
+      },
+      {
+        "tag": "a",
+        "id": "hero-cta-products",
+        "text": "Ürünleri Gör",
+        "className": "btn btn-primary",
+        "size": "138x42"
+      },
+      {
+        "tag": "a",
+        "id": "hero-cta-call",
+        "text": "Hemen ara",
+        "className": "btn btn-ghost",
+        "size": "130x42"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Ürünler",
+        "className": "",
+        "size": "49x17"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Hizmetler",
+        "className": "",
+        "size": "64x17"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Neden biz",
+        "className": "",
+        "size": "68x17"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Yorumlar",
+        "className": "",
+        "size": "59x17"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "İletişim",
+        "className": "",
+        "size": "47x17"
+      }
+    ]
+  },
+  "390x844": {
+    "clientWidth": 390,
+    "initialScrollWidth": 390,
+    "hasInitialOverflow": false,
+    "overflowCount": 123,
+    "overflowingElements": [
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-motif",
+        "section": "urunler",
+        "rect": {
+          "left": 230,
+          "right": 430,
+          "width": 200,
+          "overflowAmount": 40
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-float",
+        "section": "urunler",
+        "rect": {
+          "left": 227,
+          "right": 433,
+          "width": 206,
+          "overflowAmount": 43
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-ring planet-ring--back",
+        "section": "urunler",
+        "rect": {
+          "left": 232,
+          "right": 428,
+          "width": 195,
+          "overflowAmount": 38
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-ring planet-ring--front",
+        "section": "urunler",
+        "rect": {
+          "left": 232,
+          "right": 428,
+          "width": 195,
+          "overflowAmount": 38
+        }
+      },
+      {
+        "tag": "article",
+        "id": "",
+        "className": "p-card glass",
+        "section": "urunler",
+        "rect": {
+          "left": 310,
+          "right": 590,
+          "width": 280,
+          "overflowAmount": 200
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "p-visual",
+        "section": "urunler",
+        "rect": {
+          "left": 311,
+          "right": 589,
+          "width": 278,
+          "overflowAmount": 199
+        }
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 386,
+          "right": 513,
+          "width": 128,
+          "overflowAmount": 123
+        }
+      },
+      {
+        "tag": "g",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 401,
+          "right": 499,
+          "width": 98,
+          "overflowAmount": 109
+        }
+      },
+      {
+        "tag": "rect",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 401,
+          "right": 499,
+          "width": 98,
+          "overflowAmount": 109
+        }
+      },
+      {
+        "tag": "path",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 401,
+          "right": 499,
+          "width": 98,
+          "overflowAmount": 109
+        }
+      },
+      {
+        "tag": "rect",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 409,
+          "right": 437,
+          "width": 28,
+          "overflowAmount": 47
+        }
+      },
+      {
+        "tag": "text",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 412,
+          "right": 423,
+          "width": 11,
+          "overflowAmount": 33
+        }
+      },
+      {
+        "tag": "circle",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 476,
+          "right": 487,
+          "width": 11,
+          "overflowAmount": 97
+        }
+      },
+      {
+        "tag": "circle",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 462,
+          "right": 467,
+          "width": 4,
+          "overflowAmount": 77
+        }
+      },
+      {
+        "tag": "path",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 411,
+          "right": 488,
+          "width": 77,
+          "overflowAmount": 98
+        }
+      },
+      {
+        "tag": "path",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 437,
+          "right": 462,
+          "width": 26,
+          "overflowAmount": 72
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "p-body",
+        "section": "urunler",
+        "rect": {
+          "left": 311,
+          "right": 589,
+          "width": 278,
+          "overflowAmount": 199
+        }
+      },
+      {
+        "tag": "h3",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 327,
+          "right": 573,
+          "width": 246,
+          "overflowAmount": 183
+        }
+      },
+      {
+        "tag": "p",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 327,
+          "right": 573,
+          "width": 246,
+          "overflowAmount": 183
+        }
+      },
+      {
+        "tag": "ul",
+        "id": "",
+        "className": "chips",
+        "section": "urunler",
+        "rect": {
+          "left": 327,
+          "right": 573,
+          "width": 246,
+          "overflowAmount": 183
+        }
+      }
+    ],
+    "smallTouchTargetsCount": 8,
+    "smallTouchTargets": [
+      {
+        "tag": "button",
+        "id": "",
+        "text": "KONUM:\nDerin uzay\nİlçeler ↗",
+        "className": "hero-hud hero-hud-btn",
+        "size": "232x33"
+      },
+      {
+        "tag": "a",
+        "id": "hero-cta-products",
+        "text": "Ürünleri Gör",
+        "className": "btn btn-primary",
+        "size": "138x42"
+      },
+      {
+        "tag": "a",
+        "id": "hero-cta-call",
+        "text": "Hemen ara",
+        "className": "btn btn-ghost",
+        "size": "130x42"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Ürünler",
+        "className": "",
+        "size": "49x17"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Hizmetler",
+        "className": "",
+        "size": "64x17"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Neden biz",
+        "className": "",
+        "size": "68x17"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Yorumlar",
+        "className": "",
+        "size": "59x17"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "İletişim",
+        "className": "",
+        "size": "47x17"
+      }
+    ]
+  },
+  "412x915": {
+    "clientWidth": 412,
+    "initialScrollWidth": 412,
+    "hasInitialOverflow": false,
+    "overflowCount": 124,
+    "overflowingElements": [
+      {
+        "tag": "div",
+        "id": "",
+        "className": "blast-ring ring-2",
+        "section": "top",
+        "rect": {
+          "left": 101,
+          "right": 459,
+          "width": 358,
+          "overflowAmount": 47
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-motif",
+        "section": "urunler",
+        "rect": {
+          "left": 252,
+          "right": 452,
+          "width": 200,
+          "overflowAmount": 40
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-float",
+        "section": "urunler",
+        "rect": {
+          "left": 249,
+          "right": 455,
+          "width": 207,
+          "overflowAmount": 43
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-ring planet-ring--back",
+        "section": "urunler",
+        "rect": {
+          "left": 254,
+          "right": 450,
+          "width": 195,
+          "overflowAmount": 38
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-ring planet-ring--front",
+        "section": "urunler",
+        "rect": {
+          "left": 254,
+          "right": 450,
+          "width": 195,
+          "overflowAmount": 38
+        }
+      },
+      {
+        "tag": "article",
+        "id": "",
+        "className": "p-card glass",
+        "section": "urunler",
+        "rect": {
+          "left": 311,
+          "right": 591,
+          "width": 280,
+          "overflowAmount": 179
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "p-visual",
+        "section": "urunler",
+        "rect": {
+          "left": 312,
+          "right": 590,
+          "width": 278,
+          "overflowAmount": 178
+        }
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 387,
+          "right": 514,
+          "width": 128,
+          "overflowAmount": 102
+        }
+      },
+      {
+        "tag": "g",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 402,
+          "right": 500,
+          "width": 98,
+          "overflowAmount": 88
+        }
+      },
+      {
+        "tag": "rect",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 402,
+          "right": 500,
+          "width": 98,
+          "overflowAmount": 88
+        }
+      },
+      {
+        "tag": "path",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 402,
+          "right": 500,
+          "width": 98,
+          "overflowAmount": 88
+        }
+      },
+      {
+        "tag": "rect",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 410,
+          "right": 438,
+          "width": 28,
+          "overflowAmount": 26
+        }
+      },
+      {
+        "tag": "text",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 413,
+          "right": 424,
+          "width": 11,
+          "overflowAmount": 12
+        }
+      },
+      {
+        "tag": "circle",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 477,
+          "right": 488,
+          "width": 11,
+          "overflowAmount": 76
+        }
+      },
+      {
+        "tag": "circle",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 463,
+          "right": 468,
+          "width": 4,
+          "overflowAmount": 56
+        }
+      },
+      {
+        "tag": "path",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 412,
+          "right": 489,
+          "width": 77,
+          "overflowAmount": 77
+        }
+      },
+      {
+        "tag": "path",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 438,
+          "right": 463,
+          "width": 26,
+          "overflowAmount": 51
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "p-body",
+        "section": "urunler",
+        "rect": {
+          "left": 312,
+          "right": 590,
+          "width": 278,
+          "overflowAmount": 178
+        }
+      },
+      {
+        "tag": "h3",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 328,
+          "right": 574,
+          "width": 246,
+          "overflowAmount": 162
+        }
+      },
+      {
+        "tag": "p",
+        "id": "",
+        "className": "",
+        "section": "urunler",
+        "rect": {
+          "left": 328,
+          "right": 574,
+          "width": 246,
+          "overflowAmount": 162
+        }
+      }
+    ],
+    "smallTouchTargetsCount": 8,
+    "smallTouchTargets": [
+      {
+        "tag": "button",
+        "id": "",
+        "text": "KONUM:\nDerin uzay\nİlçeler ↗",
+        "className": "hero-hud hero-hud-btn",
+        "size": "232x33"
+      },
+      {
+        "tag": "a",
+        "id": "hero-cta-products",
+        "text": "Ürünleri Gör",
+        "className": "btn btn-primary",
+        "size": "138x42"
+      },
+      {
+        "tag": "a",
+        "id": "hero-cta-call",
+        "text": "Hemen ara",
+        "className": "btn btn-ghost",
+        "size": "130x42"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Ürünler",
+        "className": "",
+        "size": "49x17"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Hizmetler",
+        "className": "",
+        "size": "64x17"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Neden biz",
+        "className": "",
+        "size": "68x17"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Yorumlar",
+        "className": "",
+        "size": "60x17"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "İletişim",
+        "className": "",
+        "size": "47x17"
+      }
+    ]
+  },
+  "768x1024": {
+    "clientWidth": 768,
+    "initialScrollWidth": 768,
+    "hasInitialOverflow": false,
+    "overflowCount": 4,
+    "overflowingElements": [
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-motif",
+        "section": "urunler",
+        "rect": {
+          "left": 553,
+          "right": 814,
+          "width": 261,
+          "overflowAmount": 46
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-float",
+        "section": "urunler",
+        "rect": {
+          "left": 549,
+          "right": 818,
+          "width": 269,
+          "overflowAmount": 50
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-ring planet-ring--back",
+        "section": "urunler",
+        "rect": {
+          "left": 556,
+          "right": 811,
+          "width": 255,
+          "overflowAmount": 43
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-ring planet-ring--front",
+        "section": "urunler",
+        "rect": {
+          "left": 556,
+          "right": 811,
+          "width": 255,
+          "overflowAmount": 43
+        }
+      }
+    ],
+    "smallTouchTargetsCount": 6,
+    "smallTouchTargets": [
+      {
+        "tag": "button",
+        "id": "",
+        "text": "KONUM:\nDerin uzay\nİlçeler ↗",
+        "className": "hero-hud hero-hud-btn",
+        "size": "246x39"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Ürünler",
+        "className": "",
+        "size": "51x18"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Hizmetler",
+        "className": "",
+        "size": "66x18"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Neden biz",
+        "className": "",
+        "size": "70x18"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Yorumlar",
+        "className": "",
+        "size": "61x18"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "İletişim",
+        "className": "",
+        "size": "48x18"
+      }
+    ]
+  },
+  "landscape-844x390": {
+    "clientWidth": 844,
+    "initialScrollWidth": 844,
+    "hasInitialOverflow": false,
+    "overflowCount": 4,
+    "overflowingElements": [
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-motif",
+        "section": "urunler",
+        "rect": {
+          "left": 608,
+          "right": 895,
+          "width": 287,
+          "overflowAmount": 51
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-float",
+        "section": "urunler",
+        "rect": {
+          "left": 603,
+          "right": 899,
+          "width": 296,
+          "overflowAmount": 55
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-ring planet-ring--back",
+        "section": "urunler",
+        "rect": {
+          "left": 611,
+          "right": 891,
+          "width": 280,
+          "overflowAmount": 47
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-ring planet-ring--front",
+        "section": "urunler",
+        "rect": {
+          "left": 611,
+          "right": 891,
+          "width": 280,
+          "overflowAmount": 47
+        }
+      }
+    ],
+    "smallTouchTargetsCount": 6,
+    "smallTouchTargets": [
+      {
+        "tag": "button",
+        "id": "",
+        "text": "KONUM:\nDerin uzay\nİlçeler ↗",
+        "className": "hero-hud hero-hud-btn",
+        "size": "247x39"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Ürünler",
+        "className": "",
+        "size": "51x18"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Hizmetler",
+        "className": "",
+        "size": "66x18"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Neden biz",
+        "className": "",
+        "size": "70x18"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Yorumlar",
+        "className": "",
+        "size": "62x18"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "İletişim",
+        "className": "",
+        "size": "48x18"
+      }
+    ]
+  },
+  "desktop-1440x900": {
+    "clientWidth": 1440,
+    "initialScrollWidth": 1440,
+    "hasInitialOverflow": false,
+    "overflowCount": 4,
+    "overflowingElements": [
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-motif",
+        "section": "urunler",
+        "rect": {
+          "left": 1040,
+          "right": 1480,
+          "width": 440,
+          "overflowAmount": 40
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-float",
+        "section": "urunler",
+        "rect": {
+          "left": 1035,
+          "right": 1485,
+          "width": 451,
+          "overflowAmount": 45
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-ring planet-ring--back",
+        "section": "urunler",
+        "rect": {
+          "left": 1045,
+          "right": 1475,
+          "width": 429,
+          "overflowAmount": 35
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-ring planet-ring--front",
+        "section": "urunler",
+        "rect": {
+          "left": 1045,
+          "right": 1475,
+          "width": 429,
+          "overflowAmount": 35
+        }
+      }
+    ],
+    "smallTouchTargetsCount": 6,
+    "smallTouchTargets": [
+      {
+        "tag": "button",
+        "id": "",
+        "text": "KONUM:\nDerin uzay\nİlçeler ↗",
+        "className": "hero-hud hero-hud-btn",
+        "size": "252x39"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Ürünler",
+        "className": "",
+        "size": "53x19"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Hizmetler",
+        "className": "",
+        "size": "68x19"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Neden biz",
+        "className": "",
+        "size": "72x19"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Yorumlar",
+        "className": "",
+        "size": "64x19"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "İletişim",
+        "className": "",
+        "size": "50x19"
+      }
+    ]
+  },
+  "desktop-1920x1080": {
+    "clientWidth": 1920,
+    "initialScrollWidth": 1920,
+    "hasInitialOverflow": false,
+    "overflowCount": 4,
+    "overflowingElements": [
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-motif",
+        "section": "urunler",
+        "rect": {
+          "left": 1520,
+          "right": 1960,
+          "width": 440,
+          "overflowAmount": 40
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-float",
+        "section": "urunler",
+        "rect": {
+          "left": 1516,
+          "right": 1964,
+          "width": 449,
+          "overflowAmount": 44
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-ring planet-ring--back",
+        "section": "urunler",
+        "rect": {
+          "left": 1525,
+          "right": 1955,
+          "width": 430,
+          "overflowAmount": 35
+        }
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "planet-ring planet-ring--front",
+        "section": "urunler",
+        "rect": {
+          "left": 1525,
+          "right": 1955,
+          "width": 430,
+          "overflowAmount": 35
+        }
+      }
+    ],
+    "smallTouchTargetsCount": 6,
+    "smallTouchTargets": [
+      {
+        "tag": "button",
+        "id": "",
+        "text": "KONUM:\nAtmosfere giriş\nİlçeler",
+        "className": "hero-hud hero-hud-btn",
+        "size": "286x39"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Ürünler",
+        "className": "",
+        "size": "53x19"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Hizmetler",
+        "className": "",
+        "size": "68x19"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Neden biz",
+        "className": "",
+        "size": "72x19"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "Yorumlar",
+        "className": "",
+        "size": "64x19"
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "text": "İletişim",
+        "className": "",
+        "size": "50x19"
+      }
+    ]
+  }
+}

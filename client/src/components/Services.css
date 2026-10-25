@@ -125,6 +125,14 @@
   }
 }
 
+@media (max-width: 1023px) {
+  .orbit-motif {
+    left: -10px;
+    width: min(240px, 60vw);
+    pointer-events: none;
+  }
+}
+
 /* ─── Mobil: hizmet kartları sıkıştırma ─── */
 @media (max-width: 767px) {
   .svc-list {
@@ -150,7 +158,9 @@
     line-height: 1.55;
   }
   .svc-link {
-    min-height: 36px;
+    min-height: 44px;
     font-size: var(--fs-xs);
+    display: inline-flex;
+    align-items: center;
   }
 }

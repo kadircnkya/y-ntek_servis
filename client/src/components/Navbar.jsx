@@ -1,13 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
-import { LogoMark, PhoneIcon, WhatsAppIcon } from './Icons.jsx'
+import { PhoneIcon, WhatsAppIcon } from './Icons.jsx'
 import { site, telLink, waLink } from '../config.js'
 import './Navbar.css'
 
 const links = [
   ['Ürünler', '#urunler'],
   ['Hizmetler', '#hizmetler'],
-  ['Neden biz', '#neden-biz'],
-  ['Yorumlar', '#yorumlar'],
+  ['Neden Biz', '#neden-biz'],
   ['İletişim', '#iletisim'],
 ]
 
@@ -63,7 +62,13 @@ export default function Navbar() {
     <header className={`nav ${solid || open ? 'is-solid' : ''}`}>
       <div className="nav-row">
         <a href="#top" className="nav-brand" aria-label={`${site.name}, ana sayfa`} onClick={close}>
-          <LogoMark />
+          <img
+            src="/yontek-rozet.svg"
+            alt={`${site.name} Rozet Logo`}
+            className="nav-rozet-logo"
+            width="70"
+            height="70"
+          />
           <span className="nav-brand-text">
             <strong>{site.name}</strong>
             <small>{site.city && site.city !== 'Şehir' ? `${site.city} · Uydu & Çanak` : 'Uydu & Çanak Sistemleri'}</small>
