@@ -1,26 +1,26 @@
 [
   {
-    "id": "montaj",
-    "title": "Çanak anten montajı",
-    "text": "Duvara, çatıya, balkon korkuluğuna ya da bahçedeki direğe — konsolu, kabloyu ve bağlantıları baştan sona biz yaparız.",
-    "icon": "mount"
-  },
-  {
-    "id": "yonlendirme",
-    "title": "Uydu yönlendirme ve ayar",
-    "text": "Sinyal ölçerle uyduyu bulur, kanal listesini kurar, görüntü ve ses gelene kadar başınızdan ayrılmayız.",
-    "icon": "aim"
-  },
-  {
     "id": "servis",
-    "title": "Arıza ve servis",
-    "text": "Görüntü donuyor, kanallar kayboldu, rüzgârda çanak oynadı? Nedenini bulup yerinde çözeriz.",
+    "title": "Uydu arıza ve tamir",
+    "text": "Görüntü donuyor, sinyal yok, kanallar kayboldu, rüzgârda çanak oynadı? Arızanın nedenini yerinde bulup onarırız.",
     "icon": "repair"
   },
   {
+    "id": "yonlendirme",
+    "title": "Uydu ayarı ve sinyal düzeltme",
+    "text": "Sinyal ölçerle uyduyu yeniden buluruz, kanal listesini kurarız, görüntü ve ses gelene kadar başınızdan ayrılmayız.",
+    "icon": "aim"
+  },
+  {
     "id": "merkezi",
-    "title": "Merkezi sistem",
-    "text": "Apartman ve sitelerde tek çanaktan bütün dairelere. Projelendirme, kurulum ve bakım hepsi bir elden.",
+    "title": "Merkezi sistem arıza ve bakım",
+    "text": "Apartman ve sitelerde sinyal kaybı, bozuk dağıtım ve kablo arızalarını yerinde tespit edip gideririz.",
     "icon": "central"
+  },
+  {
+    "id": "montaj",
+    "title": "Çanak sökme, takma ve yeniden montaj",
+    "text": "Yeri değişen, devrilen ya da sökülmesi gereken çanağı yeniden monte eder, ayarını yaparız.",
+    "icon": "mount"
   }
 ]
