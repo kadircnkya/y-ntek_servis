@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { canLoadHeroVideo, prefersReducedMotion } from '../lib/device.js'
-import { site, telLink } from '../config.js'
+import { site, telLink, waLink } from '../config.js'
 import { ArrowIcon, PhoneIcon } from './Icons.jsx'
 import { PlanetExplosion } from './PlanetExplosion.jsx'
 import './Hero.css'
@@ -227,7 +227,7 @@ export default function Hero() {
         <div className="hero-content">
           {/* Üstteki mavi yazı: tüm slaytlarda sabit kalır */}
           <p className="hero-kicker">
-            {site.city} · Çanak anten satış, montaj ve uydu ayarı
+            {site.city} · Uydu arıza, tamir ve sinyal ayarı servisi
           </p>
 
           {/* Sadece ortadaki yazılar değişir (CLS 0) */}
@@ -236,6 +236,7 @@ export default function Hero() {
             <div className={`hero-slide ${stage === 0 ? 'is-active' : 'is-past'}`} aria-hidden={stage !== 0}>
               <h1 id="hero-title" className="hero-title hero-title--brand">
                 {site.name}
+                <span className="sr-only"> – Uydu çanak anten arıza ve tamir servisi, Kartal ve Anadolu Yakası</span>
               </h1>
               <p className="hero-sub">
                 Sinyal uzaydan gelir, <span className="hl">çatınıza biz ulaştırırız.</span>
@@ -245,13 +246,13 @@ export default function Hero() {
             {/* Slayt 1: Uzaydan başlayan sinyal */}
             <div className={`hero-slide ${stage === 1 ? 'is-active' : stage > 1 ? 'is-past' : ''}`} aria-hidden={stage !== 1}>
               <p className="hero-title">Uzaydan başlayan sinyal</p>
-              <p className="hero-sub">Her yayın bir yerden gelir, en net görüntü ve kesintisiz televizyon yayını.</p>
+              <p className="hero-sub">Yayın kesildiğinde nedenini sinyal ölçerle bulur, görüntüyü geri getiririz.</p>
             </div>
 
             {/* Slayt 2: Dünyaya iniyoruz */}
             <div className={`hero-slide ${stage === 2 ? 'is-active' : ''}`} aria-hidden={stage !== 2}>
               <p className="hero-title">Dünyaya iniyoruz</p>
-              <p className="hero-sub">Sinyal sizin çatınıza ulaşır, aynı gün montaj ve profesyonel uydu ayarı.</p>
+              <p className="hero-sub">Sinyal çatınızda kesildiyse aynı gün arıza tespiti, tamir ve profesyonel uydu ayarı.</p>
             </div>
           </div>
 
@@ -261,7 +262,7 @@ export default function Hero() {
               Hizmetleri Gör <ArrowIcon />
             </a>
             <a id="hero-cta-call" className="btn btn-ghost" href={telLink}>
-              <PhoneIcon /> Hemen ara
+              <PhoneIcon /> Arıza için hemen ara
             </a>
           </div>
         </div>
@@ -329,7 +330,7 @@ export default function Hero() {
               📍 İstanbul Anadolu Yakası
             </h3>
             <p className="districts-desc">
-              Anadolu yakasındaki aşağıdaki ilçelere aynı gün servis ve montaj yapıyoruz.
+              Anadolu Yakası'ndaki aşağıdaki ilçelere arıza servisi ve tamir hizmeti veriyoruz.
             </p>
             <ul className="districts-list">
               {ANADOLU_DISTRICTS.map((district) => (
@@ -337,11 +338,13 @@ export default function Hero() {
               ))}
             </ul>
             <a
-              href="#randevu"
+              href={waLink()}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn btn-wa btn-block"
               onClick={() => setModalOpen(false)}
             >
-              Randevu Al
+              Servis Çağır
             </a>
           </div>
         </div>,
