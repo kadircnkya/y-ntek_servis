@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { canLoadHeroVideo, prefersReducedMotion } from '../lib/device.js'
 import { site, telLink, waLink } from '../config.js'
+import { trackPhoneClick } from '../utils/analytics.js'
 import { ArrowIcon, PhoneIcon } from './Icons.jsx'
 import { PlanetExplosion } from './PlanetExplosion.jsx'
 import './Hero.css'
@@ -261,7 +262,7 @@ export default function Hero() {
             <a id="hero-cta-products" className="btn btn-primary" href="#hizmetler">
               Hizmetleri Gör <ArrowIcon />
             </a>
-            <a id="hero-cta-call" className="btn btn-ghost" href={telLink}>
+            <a id="hero-cta-call" className="btn btn-ghost" href={telLink} onClick={trackPhoneClick}>
               <PhoneIcon /> Arıza için hemen ara
             </a>
           </div>

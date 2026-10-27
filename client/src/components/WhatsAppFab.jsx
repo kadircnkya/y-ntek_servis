@@ -1,5 +1,6 @@
 import { WhatsAppIcon } from './Icons.jsx'
 import { waLink } from '../config.js'
+import { trackWhatsAppClick } from '../utils/analytics.js'
 import './WhatsAppFab.css'
 
 export default function WhatsAppFab() {
@@ -11,6 +12,7 @@ export default function WhatsAppFab() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="WhatsApp ile iletişime geçin"
+      onClick={trackWhatsAppClick}
     >
       <WhatsAppIcon />
       <span className="wa-fab-pulse" aria-hidden="true" />

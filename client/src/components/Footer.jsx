@@ -1,4 +1,5 @@
-import { SHOP } from '../config.js'
+import { SHOP, telLink } from '../config.js'
+import { trackPhoneClick } from '../utils/analytics.js'
 import './Footer.css'
 
 const year = new Date().getFullYear()
@@ -45,7 +46,11 @@ export default function Footer() {
         {/* İletişim özet */}
         <div className="footer-contact">
           <h3>İletişim</h3>
-          <p>{SHOP.phonePretty}</p>
+          <p>
+            <a href={telLink} onClick={trackPhoneClick}>
+              {SHOP.phonePretty}
+            </a>
+          </p>
           <p>{SHOP.address}</p>
           <p>{SHOP.city}</p>
         </div>

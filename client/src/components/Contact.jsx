@@ -1,6 +1,7 @@
 import { useSection } from '../hooks/useSection.js'
 import { PhoneIcon, WhatsAppIcon, MapPinIcon } from './Icons.jsx'
 import { SHOP, waLink } from '../config.js'
+import { trackPhoneClick } from '../utils/analytics.js'
 import './Contact.css'
 
 export default function Contact() {
@@ -35,6 +36,7 @@ export default function Contact() {
             href={`tel:${SHOP.phone}`}
             className="cta-card glass reveal"
             style={{ '--i': 1 }}
+            onClick={trackPhoneClick}
           >
             <span className="cta-icon cta-icon--phone"><PhoneIcon /></span>
             <span className="cta-label">Bizi arayın</span>

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { PhoneIcon, WhatsAppIcon } from './Icons.jsx'
 import { site, telLink, waLink } from '../config.js'
+import { trackPhoneClick } from '../utils/analytics.js'
 import './Navbar.css'
 
 const links = [
@@ -84,7 +85,7 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <a className="btn btn-primary btn-sm nav-call" href={telLink}>
+          <a className="btn btn-primary btn-sm nav-call" href={telLink} onClick={trackPhoneClick}>
             <PhoneIcon />
             <span>{site.phoneDisplay}</span>
           </a>
@@ -120,7 +121,7 @@ export default function Navbar() {
           </ol>
         </nav>
         <div className="m-menu-actions">
-          <a className="btn btn-primary btn-block" href={telLink} onClick={close}>
+          <a className="btn btn-primary btn-block" href={telLink} onClick={() => { close(); trackPhoneClick(); }}>
             <PhoneIcon /> Hemen ara
           </a>
           <a className="btn btn-wa btn-block" href={waLink()} target="_blank" rel="noopener noreferrer" onClick={close}>

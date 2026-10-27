@@ -1,4 +1,5 @@
 import { site, telLink } from '../config.js'
+import { trackPhoneClick } from '../utils/analytics.js'
 
 const links = [
   ['Ürünler', '#urunler'],
@@ -31,7 +32,7 @@ export default function Header() {
             </a>
           ))}
         </nav>
-        <a className="btn btn-signal btn-sm" href={telLink}>
+        <a className="btn btn-signal btn-sm" href={telLink} onClick={trackPhoneClick}>
           <span className="only-wide">{site.phoneDisplay}</span>
           <span className="only-narrow">Ara</span>
         </a>
