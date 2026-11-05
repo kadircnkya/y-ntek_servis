@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { canLoadHeroVideo, prefersReducedMotion } from '../lib/device.js'
 import { site, telLink, waLink } from '../config.js'
-import { trackPhoneClick } from '../utils/analytics.js'
-import { ArrowIcon, PhoneIcon } from './Icons.jsx'
+import { trackPhoneClick, trackWhatsAppClick } from '../utils/analytics.js'
+import { ArrowIcon, PhoneIcon, WhatsAppIcon } from './Icons.jsx'
 import { PlanetExplosion } from './PlanetExplosion.jsx'
 import './Hero.css'
 
@@ -259,11 +259,21 @@ export default function Hero() {
 
           {/* Butonlar: tüm slaytlarda sabit ve tıklanabilir kalır */}
           <div className="hero-actions">
-            <a id="hero-cta-products" className="btn btn-primary" href="#hizmetler">
-              Hizmetleri Gör <ArrowIcon />
-            </a>
-            <a id="hero-cta-call" className="btn btn-ghost" href={telLink} onClick={trackPhoneClick}>
+            <a id="hero-cta-call" className="btn btn-primary hero-btn-call" href={telLink} onClick={trackPhoneClick}>
               <PhoneIcon /> Arıza için hemen ara
+            </a>
+            <a
+              id="hero-cta-whatsapp"
+              className="btn btn-wa hero-btn-wa"
+              href={waLink('Merhaba, web sitenizden yazıyorum.')}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={trackWhatsAppClick}
+            >
+              <WhatsAppIcon /> WhatsApp'tan yaz
+            </a>
+            <a id="hero-cta-products" className="btn btn-ghost" href="#hizmetler">
+              Hizmetleri Gör <ArrowIcon />
             </a>
           </div>
         </div>

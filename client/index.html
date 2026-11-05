@@ -16,6 +16,47 @@
     gtag('config', 'AW-18525634687');
   </script>
 
+  <!-- Google Ads dönüşüm takibi: telefon ve WhatsApp tıklamaları -->
+  <script>
+    (function () {
+      var AW_ID = 'AW-18525634687';
+
+      // Google Ads > Hedefler > Dönüşümler > ilgili dönüşüm > Etiket kurulumu
+      // bölümündeki "send_to" değerinin "/" işaretinden sonraki kısmını yazın.
+      var PHONE_LABEL = 'BURAYA_TELEFON_ETIKETI';     // "Tıkla ve ara" dönüşümü
+      var WHATSAPP_LABEL = 'BURAYA_WHATSAPP_ETIKETI'; // "WhatsApp tıkla" dönüşümü
+
+      function report(label) {
+        if (!label || label.indexOf('BURAYA_') === 0) return; // etiket girilmediyse gönderme
+        if (typeof window.gtag !== 'function') return;
+        window.gtag('event', 'conversion', {
+          send_to: AW_ID + '/' + label,
+          value: 1.0,
+          currency: 'TRY'
+        });
+      }
+
+      // Olay delegasyonu: React bileşenlerine dokunmadan sitedeki tüm
+      // tel: ve WhatsApp bağlantılarını yakalar (sonradan eklenenleri de).
+      document.addEventListener('click', function (e) {
+        var el = e.target;
+        while (el && el !== document && el.tagName !== 'A') el = el.parentNode;
+        if (!el || el === document) return;
+
+        var href = (el.getAttribute('href') || '').toLowerCase();
+        if (href.indexOf('tel:') === 0) {
+          report(PHONE_LABEL);
+        } else if (
+          href.indexOf('wa.me') !== -1 ||
+          href.indexOf('api.whatsapp.com') !== -1 ||
+          href.indexOf('whatsapp://') === 0
+        ) {
+          report(WHATSAPP_LABEL);
+        }
+      }, true);
+    })();
+  </script>
+
   <title>Yöntek Servis | Uydu Çanak Anten Arıza ve Tamir Servisi | Kartal, Anadolu Yakası</title>
   <meta name="description"
     content="Uydu sinyal yok, görüntü donuyor, çanak oynadı mı? Yöntek Servis: sinyal ölçerle arıza tespiti, uydu ayarı ve plazma tv tamiri. Kartal ve Anadolu Yakası, aynı gün servis." />

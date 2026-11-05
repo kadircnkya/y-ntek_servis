@@ -186,6 +186,24 @@
   padding-inline: 22px;
 }
 
+/* ─── Hero CTA: Telefon butonu (primary, mavi) ─── */
+.hero-btn-call {
+  box-shadow: 0 4px 20px rgba(47, 123, 255, 0.35);
+}
+
+/* ─── Hero CTA: WhatsApp butonu ─── */
+.hero-btn-wa {
+  background: #25d366;
+  border-color: #25d366;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+}
+.hero-btn-wa:hover {
+  background: #20c05c;
+  border-color: #20c05c;
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+}
+
 .hero-foot {
   display: flex;
   align-items: center;
@@ -266,6 +284,9 @@
     animation: none;
     transform: scaleX(1);
   }
+  .hero-btn-call {
+    animation: none;
+  }
 }
 .hero-skip {
   min-height: var(--tap);
@@ -310,12 +331,32 @@
   }
   .hero-actions {
     margin-top: var(--s-3);
+    gap: 10px;
   }
   .hero-actions .btn {
-    min-height: 48px;
+    min-height: 52px;
     padding-inline: 18px;
-    font-size: 0.88rem;
-    flex: 1 1 140px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    flex: 1 1 100%;
+  }
+  /* Telefon ve WP butonları mobilde tam genişlik, parlak glow */
+  .hero-btn-call {
+    order: -2;
+    box-shadow: 0 4px 24px rgba(47, 123, 255, 0.45), 0 0 0 1px rgba(95, 228, 255, 0.2);
+    animation: hero-call-pulse 3s ease-in-out infinite;
+  }
+  .hero-btn-wa {
+    order: -1;
+    box-shadow: 0 4px 24px rgba(37, 211, 102, 0.45), 0 0 0 1px rgba(37, 211, 102, 0.25);
+  }
+  /* Hizmetleri Gör — daha küçük, ikincil */
+  .hero-actions .btn-ghost {
+    flex: 1 1 100%;
+    min-height: 44px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    opacity: 0.85;
   }
   .hero-hud {
     top: calc(var(--header-h) + 6px);
@@ -352,6 +393,11 @@
   .hero-kicker {
     margin-bottom: var(--s-2);
     font-size: 0.65rem;
+  }
+
+  @keyframes hero-call-pulse {
+    0%, 100% { box-shadow: 0 4px 24px rgba(47, 123, 255, 0.45), 0 0 0 1px rgba(95, 228, 255, 0.2); }
+    50% { box-shadow: 0 4px 28px rgba(47, 123, 255, 0.6), 0 0 0 6px rgba(47, 123, 255, 0); }
   }
 }
 
