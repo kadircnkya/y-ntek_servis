@@ -8,6 +8,7 @@ import Reviews from './components/Reviews.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 import WhatsAppFab from './components/WhatsAppFab.jsx'
+import MobileBottomBar from './components/MobileBottomBar.jsx'
 import { site } from './config.js'
 
 const jsonLd = {
@@ -35,6 +36,7 @@ export default function App() {
       </main>
       <Footer />
       <WhatsAppFab />
+      <MobileBottomBar />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </>
   )

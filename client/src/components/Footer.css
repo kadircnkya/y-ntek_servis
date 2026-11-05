@@ -172,6 +172,8 @@
   }
   .footer-bottom {
     padding-block: 10px;
+    /* Alt sabit bar yüksekliği kadar boşluk bırak */
+    padding-bottom: calc(10px + 64px + env(safe-area-inset-bottom));
   }
   .footer-bottom p {
     font-size: 0.7rem;
