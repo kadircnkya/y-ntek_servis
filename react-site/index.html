@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Yöntek Uyducu | İstanbul Anadolu Yakası Uydu & Çanak Anten Servisi</title>
+  <meta name="description"
+    content="İstanbul Anadolu Yakası'nın en hızlı uydu servisi! Çanak anten montajı, sinyal ayarı, merkezi uydu ve TV kurulumunda 30 dakikada kapınızdayız. 7/24 Acil Usta: 0537 602 34 37" />
+  <meta name="keywords"
+    content="istanbul uyducu, kartal uydu servisi, anadolu yakası uydu montajı, çanak anten ayarı, sinyal yok hatası, merkezi uydu sistemi, yöntek teknik servis" />
+  <meta name="theme-color" content="#1e3a8a" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Yöntek Uyducu | İstanbul Anadolu Yakası Uydu & Çanak Anten Servisi" />
+  <meta property="og:description"
+    content="İstanbul Anadolu Yakası'nın en hızlı uydu servisi! Çanak anten montajı, sinyal ayarı, merkezi uydu ve TV kurulumunda 30 dakikada kapınızdayız." />
+  <meta property="og:image" content="/assets/images/og-image.jpg" />
+  <meta property="og:locale" content="tr_TR" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+
+  <!-- Google Font: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18525634687"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-18525634687');
+  </script>
+
+  <!-- Google Ads dönüşüm takibi: telefon ve WhatsApp tıklamaları -->
+  <script>
+    (function () {
+      var AW_ID = 'AW-18525634687';
+      var PHONE_LABEL = 'R_CHCLuGgawdEP-A24FF';
+
+      function report(label) {
+        if (!label || label.indexOf('BURAYA_') === 0) return;
+        if (typeof window.gtag !== 'function') return;
+        window.gtag('event', 'conversion', {
+          send_to: AW_ID + '/' + label,
+          value: 1.0,
+          currency: 'TRY'
+        });
+      }
+
+      document.addEventListener('click', function (e) {
+        var el = e.target;
+        while (el && el !== document && el.tagName !== 'A') el = el.parentNode;
+        if (!el || el === document) return;
+
+        var href = (el.getAttribute('href') || '').toLowerCase();
+        if (href.indexOf('tel:') === 0) {
+          report(PHONE_LABEL);
+        }
+      }, true);
+    })();
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
+
